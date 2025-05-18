@@ -1,40 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EX2</title>
     <link rel="stylesheet" href="ex2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
-<body class="bg-[#0A0A0B] max-w-screen-xl mx-auto">
-        <nav class="bg-[#0A0A0B] max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="picture/ri_steering-fill.png" class="h-8" alt="" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Elecar</span>
+
+<body class="bg-[#0A0A0B] max-w-screen-xl mx-auto min-h-screen font-[Exo] text-white">
+    <nav class="bg-[#0A0A0B] dark:bg-[#0A0A0B]">
+        <div class="h-[80px] flex justify-between items-center">
+            <div class="">
+                <img src="picture/Logo.png" class="w-[100px]" alt="">
+
             </div>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto bg-[#0A0A0B]" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#0A0A0B] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Popular </a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Feature</a>
-                    </li>
+            <div class="">
+                <ul class="gap-10 text-xl cursor-pointer md:flex hidden">
+                    <li class="text-blue-500 hover:text-blue-500 ">Home</li>
+                    <li class="hover:text-blue-500 ">About</li>
+                    <li class="hover:text-blue-500 ">Popular</li>
+                    <li class="hover:text-blue-500  ">Feature</li>
                 </ul>
+                <div class="md:hidden flex w-[60px]">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
-        </nav>
+            
+        </div>
+        
+    </nav>
+    <div class="md:text-5xl text-white center pt-20 font-[Exo] text-4xl">Choose The Best Car</div>
+    <div class="md:text-3xl text-white center pt-10 font-[Exo] text-2xl">Porsche Mission E</div>
+    <div class="flex flex-col justify-center items-center py-10 gap-10">
+        <img src="picture/Especification home.png" alt="" />
+        <img src="picture/home 1.png" alt="">
+    </div>
+    <div class="flex justify-center items-center gap-40">
+        <div class="flex flex-col text-white justify-center items-center gap-10 w-[210px]">
+            <i class="fa fa-thermometer" style="font-size: 20pt;"></i>
+            <span class="text-white flex flex-col justify-center items-center font-[Exo]">
+                <p class="text-4xl">24°</p>
+                <p class="text-3xl uppercase text-[#888B91]">Temperature</p>
+            </span>
+        </div>
+        <div class="flex flex-col text-white justify-center items-center gap-10 w-[210px]">
+            <p class="text-3xl font-[Exo]">Km</p>
+            <span class="text-white flex flex-col justify-center items-center font-[Exo]">
+                <p class="text-4xl">873</p>
+                <p class="text-3xl uppercase text-[#888B91]">MILEAGE</p>
+            </span>
+        </div>
+        <div class="flex flex-col text-white justify-center items-center gap-10 w-[210px]">
+            <i class="fa fa-bolt" style="font-size: 20pt;"></i>
+            <span class="text-white flex flex-col justify-center items-center font-[Exo]">
+                <p class="text-4xl">94%</p>
+                <p class="text-3xl uppercase text-[#888B91]">BATTERY</p>
+            </span>
+        </div>
+    </div>
+    <div class="flex justify-center items-center mt-10">
+        <div
+            class="w-[200px] h-[200px] flex justify-center items-center  rounded-full border-2 border-green-300 bg-red">
+            <div
+                class="w-[160px] h-[160px] flex justify-center items-center text-white text-3xl uppercase font-[Exo] rounded-full border-2 border-green-300 bg-red">
+                start
+            </div>
+        </div>
+    </div>
+    <div class="h-[532px] flex justify-center gap-10 items-center">
+        <div class="flex justify-end items-center w-[640px]">
+            <img src="picture/wheel.png" alt="">
+        </div>
+        <div class="flex flex-col justify-start w-[640px] gap-5">
+            <span class="flex flex-col gap-10 w-[400px] text-white">
+                <p class="text-3xl">Machines With Future Technology</p>
+                <p>See the future with high-performance electric cars produced by renowned brands. They feature
+                    futuristic builds and designs with new and innovative platforms that last a long time.</p>
+            </span>
+            <div class="">
+                <button class="text-white bg-[#4177DC] py-4 px-8">
+                    Know More
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="h-[636px] flex justify-center">
+        <div class="w-[350px] text-3xl">
+            <p class="flex justify-center">Choose Your Electric Car</p>
+            <p class="flex justify-center">Of The Porsche Brand</p>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
