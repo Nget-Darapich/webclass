@@ -1,0 +1,104 @@
+body{
+    margin-left: 40px;
+    .section-1{
+        text-align: center;
+        background-color: #46A8A6;
+        width: 1440px;
+        height: 622px;
+        h1{
+            padding-top: 184px;
+            font-size: 128px;
+            font-weight: 700;
+            color: white;
+        }
+        p{
+            padding-bottom: 185px;
+            font-size: 36px;
+            color: white;
+        }
+    }
+    .section-2{
+        text-align: center;
+        img{
+            margin-left: 387px;
+            margin-right: 387px;
+            margin-top: 160px;
+            width:666px;
+            height: 666px;
+        }
+        h3{
+            margin-top: 30px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #46A8A6;
+        }
+        p{
+            margin-top: 36px;
+            font-size: 24px;
+            font-weight: 400;
+            font-style: italic;
+        }
+        button{
+            background-color: #AB2F3D;
+            border: #AB2F3D;
+            color: white;
+            font-size: 44px;
+            margin-top: 68px;
+            margin-left: 485px;
+            margin-right: 485px;
+            width: 370px;
+            height: 85px;
+        }
+
+    }
+    .section-3{
+        margin-top: 159px;
+        text-align: center;
+        background-color: #46A8A6;
+        width: 1440px;
+        height: 396px;
+        p{
+            padding-top: 119px;
+            margin-left: 120px;
+            margin-right: 121px;
+            font-size: 36px;
+            font-weight: 400;
+            font-style: italic;
+            color: white;
+        }
+    }
+    .section-4{
+        text-align: center;
+        img{
+            margin-top: 149px;
+            margin-left: 322px;
+            margin-right: 322px;
+            width:796px;
+            height: 522px;
+        }
+        h3{
+            margin-top: 94px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #46A8A6;
+        }
+        p{
+            margin-top: 36px;
+            font-size: 24px;
+            font-weight: 400;
+            font-style: italic;
+        }
+        button{
+            margin-top: 68px;
+            background-color: #AB2F3D;
+            border: #AB2F3D;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+            width: 370px;
+            height: 85px;
+        }
+
+    }
+
+}

@@ -1,0 +1,207 @@
+body{
+    margin: 0px;
+}
+.left-side{
+    width: 50%;
+    height: 100vh;
+    background-color: aqua;
+    position: fixed;
+}
+.left-side p{
+    text-align: center;
+    font-size: 36px;
+    color: blue;
+    font-weight: bold;
+}
+.left-side img{
+    width: 100%;
+    height: 100vh;
+}
+.right-side{
+    width: 50%;
+    height: 100vh;
+    float: right; 
+}
+
+
+
+.welcome{
+    width: 100%;
+    height: 100vh;
+    background-color: #A6C8F4;
+}
+.wel{
+    color: #37209F;
+    font-size: 36px;
+    padding-top: 60px;
+    text-align: center;
+}
+.right-side .welcome img{
+    width: 240px;
+    height: auto;
+    padding: 30px;
+    border-radius: 40px;   
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+}     
+.we{
+    font-size: 16px;
+    text-align: center;
+    color: #37209F;
+    padding-bottom: 60px;
+}
+
+
+
+.about-us{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+.MVO{
+    color: #37209F;
+    font-size: 36px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 125px;
+    font-weight: 700;
+}
+.O{
+    color: #37209F;
+    font-size: 36px;
+    padding-top: 30px;
+    font-weight: 700;
+}
+.center1{
+    display: flex;
+    justify-content: center;
+}     
+.box1{
+    padding-top: 10px;
+    border: black solid 1px;
+    width: 500px;
+    height: 120px;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.box2{
+    padding-top: 10px;
+    border: black solid 1px;
+    width: 500px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.list{
+    font-size: 16px;
+    padding-left: 110px;
+}
+.wnm{
+    font-weight: 700;
+}
+
+
+
+.service-expertise{
+    width: 100%;
+    height: 1208px;
+    background-color: #37209F;
+}
+.sne{
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    color: #FFFFFF;
+    padding: 45px;
+}
+.center2{
+    display: flex;
+    justify-content: center;
+}
+.right-side .service-expertise img{
+    width: 442px;
+    height: auto;
+    border-radius: 30px;   
+    
+}  
+.txt_b_pic{
+    padding-top: 25px;
+    padding-left: 100px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.list1{
+    color: #FFFFFF;
+    padding-left: 85px;
+
+}
+.head-list{
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 30px;
+}
+.list1 ul{
+    padding-top: 20px;
+}
+.last-ul{
+    padding-bottom: 48px;
+}
+
+
+
+.contact-us{
+    width: 100%;
+    background-color: #EBE8DB;
+}
+.Extra{
+    color: #37209F;
+    font-size: 32px;
+    padding-top: 60px;
+    padding-left: 90px;
+
+}
+.H1{
+    color: #37209F;
+    font-weight: 700;
+    font-size: 36px;
+    padding-top: 30px;
+    padding-left: 90px;
+    padding-bottom: 60px; 
+}
+span{
+    font-weight: 700;;
+}
+.our-info{
+    padding-left: 90px;
+    color: #37209F;
+    font-size: 20px;
+}
+.center3{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+
+
+
+
+.header-1, .header-2, .header-3, .header-4{
+    padding-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: #F6C73B;
+    position: sticky;
+    top: 0;
+}

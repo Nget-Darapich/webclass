@@ -1,0 +1,29 @@
+body{
+    /* height: 100vw;
+    width: 100vh; */
+    width: 100%; 
+    height: 100%;
+    /* background-image: linear-gradient(red, yellow); */
+    background-image: linear-gradient(to right, yellow, red);
+}
+h1{
+    color: red;
+}
+div ol{
+    color: gold;
+}
+div strong{
+    color: silver;
+}
+div em{
+    color: cyan;
+}
+/* li:first-child{
+    color: green;
+} */
+ul li:first-child{
+    color: green;
+}
+a:link {
+    color: pink;
+}

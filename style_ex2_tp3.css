@@ -1,0 +1,63 @@
+body{
+    background-color: pink;
+
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    text-align: center;
+}
+fieldset{
+    background-color: lightblue;
+    border: 3.5px solid white;
+    margin: 10px;
+    margin-bottom: 50px;
+    padding: 35px;
+}
+label{
+    margin-left: 20px;
+    font-size: 30px;
+}
+input{
+    border: 3.5px solid green;
+    margin: 20px;
+    padding: 20px;
+    padding-left: 50px;
+    font-size: 30px;
+    width: 1280px;
+}
+.login{
+    text-align: center;
+    color: rgb(207, 207, 65);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(24, 193, 24);
+    border:rgb(24, 193, 24);
+    font-size: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 20px;
+    width: 1355px;
+}
+.checkbox{  
+    margin-top: 40px;;
+    margin-left: -610px;
+    
+}
+span{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    margin-left: -650px;
+    font-size: 30px;
+}
+.cancle{
+    text-align: center;
+    color: rgb(207, 207, 65);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(24, 193, 24);
+    border:rgb(24, 193, 24);
+    font-size: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 20px;
+   
+}

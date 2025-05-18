@@ -1,0 +1,12 @@
+body{
+    .sec1{
+        background-color: #46A8A6;
+       
+    }
+    p.main{
+        position: sticky;
+        bottom: 10px;
+        font-size: 20px;
+        color: #f80854;
+    }
+}
