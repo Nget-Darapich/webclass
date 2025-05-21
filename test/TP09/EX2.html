@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" class="inputText" oninput = "counting()" id="" style="width: 400px; height: 300px;"></textarea>
+    <div class="countWord"></div>
+    <div class="countCharacter"></div>
+    
+    <script>
+        function counting(){
+            let inputText = document.querySelector(".inputText").value;
+            let countCharacter = document.querySelector(".countCharacter");
+            countCharacter.innerHTML = "Characters: "+inputText.length;
+
+            let countWord = document.querySelector(".countWord");
+            const count = (inputText) => inputText.trim().split(/\s+/).length;
+            countWord.innerHTML = "Words: "+count(inputText);
+        }
+        
+
+    </script>
+</body>
+</html>
