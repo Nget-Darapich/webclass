@@ -14,338 +14,394 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-[#0A0A0B] w-[1280px] mx-auto min-h-screen font-[Exo] text-white">
-    <nav class="bg-[#0A0A0B] dark:bg-[#0A0A0B]">
-        <div class="h-[80px] flex justify-between items-center">
-            <div class="">
-                <img src="picture/Logo.png" class="w-[100px]" alt="">
-
-            </div>
-            <div class="">
-                <ul class="gap-10 text-xl cursor-pointer md:flex hidden">
-                    <li class="text-blue-500 hover:text-blue-500 ">Home</li>
-                    <li class="hover:text-blue-500 ">About</li>
-                    <li class="hover:text-blue-500 ">Popular</li>
-                    <li class="hover:text-blue-500  ">Feature</li>
-                </ul>
-                <div class="md:hidden flex w-[60px]">
-                    <i class="fa fa-bars"></i>
+<body class="bg-[#0A0A0B] font-[Exo] text-white min-h-screen">
+    <div class="w-full max-w-[1280px] mx-auto">
+        <nav class="bg-[#0A0A0B] dark:bg-[#0A0A0B]">
+            <div class="h-[60px] md:h-[80px] flex justify-between items-center px-4 md:px-0">
+                <div>
+                    <img src="picture/Logo.png" class="w-[80px] md:w-[100px]" alt="">
+                </div>
+                <div>
+                    <ul class="gap-6 md:gap-10 text-base md:text-xl cursor-pointer hidden md:flex">
+                        <li class="text-blue-500 hover:text-blue-500">Home</li>
+                        <li class="hover:text-blue-500">About</li>
+                        <li class="hover:text-blue-500">Popular</li>
+                        <li class="hover:text-blue-500">Feature</li>
+                    </ul>
+                    <div class="md:hidden flex w-[40px] h-[40px] items-center justify-center">
+                        <i class="fa fa-bars text-2xl"></i>
+                    </div>
                 </div>
             </div>
-
+        </nav>
+        <div class="pt-10 md:pt-20 flex flex-col items-center">
+            <div class="text-2xl md:text-5xl font-[Exo]">Choose The Best Car</div>
+            <div class="text-lg md:text-3xl font-[Exo] mt-4">Porsche Mission E</div>
         </div>
-
-    </nav>
-    <div class="md:text-5xl center pt-20 font-[Exo] text-4x flex justify-center items-center">Choose The Best Car</div>
-    <div class="md:text-3xl center pt-10 font-[Exo] text-2xl flex justify-center items-center">Porsche Mission E</div>
-    <div class="flex flex-col justify-center items-center py-10 gap-10">
-        <img src="picture/Especification home.png" alt="" />
-        <img src="picture/home 1.png" alt="">
-    </div>
-    <div class="flex justify-center items-center gap-40">
-        <div class="flex flex-col justify-center items-center gap-10 w-[210px]">
-            <i class="fa fa-thermometer" style="font-size: 20pt;"></i>
-            <span class="flex flex-col justify-center items-center font-[Exo]">
-                <p class="text-4xl">24°</p>
-                <p class="text-3xl uppercase text-[#888B91]">Temperature</p>
-            </span>
+        <div class="flex flex-col justify-center items-center py-6 md:py-10 gap-6 md:gap-10">
+            <img src="picture/Especification home.png" alt="" class="w-[87px] h-[18px] md:w-[107px] md:h-[22px]" />
+            <img src="picture/home 1.png" alt="" class="w-4/5 md:w-auto">
         </div>
-        <div class="flex flex-col justify-center items-center gap-10 w-[210px]">
-            <p class="text-3xl font-[Exo]">Km</p>
-            <span class="flex flex-col justify-center items-center font-[Exo]">
-                <p class="text-4xl">873</p>
-                <p class="text-3xl uppercase text-[#888B91]">MILEAGE</p>
-            </span>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-40">
+            <div class="flex flex-col justify-center items-center gap-4 md:gap-10 w-[160px] md:w-[210px]">
+                <i class="fa fa-thermometer" style="font-size: 20pt;"></i>
+                <span class="flex flex-col justify-center items-center font-[Exo]">
+                    <p class="text-2xl md:text-4xl">24°</p>
+                    <p class="text-lg md:text-3xl uppercase text-[#888B91]">Temperature</p>
+                </span>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-4 md:gap-10 w-[160px] md:w-[210px]">
+                <p class="text-lg md:text-3xl font-[Exo]">Km</p>
+                <span class="flex flex-col justify-center items-center font-[Exo]">
+                    <p class="text-2xl md:text-4xl">873</p>
+                    <p class="text-lg md:text-3xl uppercase text-[#888B91]">MILEAGE</p>
+                </span>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-4 md:gap-10 w-[160px] md:w-[210px]">
+                <i class="fa fa-bolt" style="font-size: 20pt;"></i>
+                <span class="flex flex-col justify-center items-center font-[Exo]">
+                    <p class="text-2xl md:text-4xl">94%</p>
+                    <p class="text-lg md:text-3xl uppercase text-[#888B91]">BATTERY</p>
+                </span>
+            </div>
         </div>
-        <div class="flex flex-col justify-center items-center gap-10 w-[210px]">
-            <i class="fa fa-bolt" style="font-size: 20pt;"></i>
-            <span class="flex flex-col justify-center items-center font-[Exo]">
-                <p class="text-4xl">94%</p>
-                <p class="text-3xl uppercase text-[#888B91]">BATTERY</p>
-            </span>
-        </div>
-    </div>
-    <div class="flex justify-center items-center mt-10">
-        <div
-            class="w-[200px] h-[200px] flex justify-center items-center  rounded-full border-2 border-green-500 bg-red">
+        <div class="flex justify-center items-center mt-8 md:mt-10">
             <div
-                class="w-[160px] h-[160px] flex justify-center items-center text-3xl uppercase font-[Exo] rounded-full border-2 border-green-300 bg-red">
-                start
+                class="w-[120px] h-[120px] md:w-[200px] md:h-[200px] flex justify-center items-center rounded-full border-2 border-green-500 bg-red">
+                <div
+                    class="w-[90px] h-[90px] md:w-[160px] md:h-[160px] flex justify-center items-center text-lg md:text-3xl uppercase font-[Exo] rounded-full border-2 border-green-300 bg-red">
+                    start
+                </div>
             </div>
         </div>
-    </div>
-    <div class="h-[532px] flex justify-center gap-40 items-center">
-        <div class="flex justify-end items-center w-[640px]">
-            <img src="picture/wheel.png" alt="">
+        <div
+            class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-40 h-[532px] md:h-[653px] mt-10 md:w-360px">
+            <div class="flex justify-center items-center w-[312px] md:w-[640px]">
+                <img src="picture/wheel.png" alt="">
+            </div>
+            <div class="flex flex-col justify-start w-full md:w-[640px] gap-4 md:gap-5 px-4">
+                <span class="flex flex-col gap-4 md:gap-10 w-full md:w-[400px]">
+                    <p class="text-xl md:text-[24px] w-[174px] h-[56px] md:w-[209px] md:h-[68px]">Machines With Future
+                        Technology</p>
+                    <p class="text-[#BABEC4] text-sm md:text-base">See the future with high-performance electric cars
+                        produced by renowned brands. They feature futuristic builds and designs with new and innovative
+                        platforms that last a long time.</p>
+                </span>
+                <div>
+                    <button
+                        class="w-[144px] h-[53px] md:w-[149px] md:h-[50px] bg-[#4177DC] py-2 md:py-4 px-4 md:px-8 rounded-[5px]">
+                        Know More
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col justify-start w-[640px] gap-5">
-            <span class="flex flex-col gap-10 w-[400px]">
-                <p class="text-3xl">Machines With Future Technology</p>
-                <p class="text-[#BABEC4]">See the future with high-performance electric cars produced by renowned
-                    brands. They feature
-                    futuristic builds and designs with new and innovative platforms that last a long time.</p>
-            </span>
-            <div class="">
-                <button class="bg-[#4177DC] py-4 px-8 rounded-[5px]">
-                    Know More
+        <div class="flex flex-col items-center h-auto md:h-[636px] md:mt-0">
+            <div
+                class="w-full md:w-[350px] text-xl md:text-3xl flex flex-col items-center mt-8 md:mt-[72px] gap-1 md:gap-2">
+                <p>Choose Your Electric Car</p>
+                <p>Of The Porsche Brand</p>
+            </div>
+            <div
+                class="w-full flex items-center md:w-[918px] h-auto md:h-[328px] flex flex-col md:flex-row justify-between gap-[40px] md:gap-[48px] text-base md:text-[24px] mt-8 md:mt-[64px] px-4 md:px-0">
+                <!-- Card 1 -->
+                <div
+                    class="w-[228px] h-[308px] md:w-[258px] md:h-[328px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[25px] rounded-[20px]">
+                    <p>Porsche</p>
+                    <p class="text-sm md:text-[16px] text-[#BABEC4]">Turbo S</p>
+                    <div class="mt-3 md:mt-[12px] ml-6 md:ml-[32px]"><img src="picture/brand1.png" alt=""></div>
+                    <div class="h-4 md:h-[18px] w-full md:w-[180px] flex gap-4 md:gap-[20px] mt-4 md:mt-[20px]">
+                        <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/kongtor.png" alt="">
+                            <p class="text-xs md:text-[13px]">3.7 Sec</p>
+                        </div>
+                        <div class="h-4 md:h-[16px] w-24 md:w-[90px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/speed.png" alt="">
+                            <p class="text-xs md:text-[13px]">356 Km/h</p>
+                        </div>
+                    </div>
+                    <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px] mt-2 md:mt-[8px]">
+                        <img src="picture/fuel.png" alt="">
+                        <p class="text-xs md:text-[13px]">Electric</p>
+                    </div>
+                    <div class="md:h[81px] flex justify-between items-center">
+                        <p class="text-base md:text-[20px] mt-[50px] md:mt-[38px] w-24 md:w-[90px]">$175,900</p>
+                        <button
+                            class="w-12 md:w-[56px] h-10 md:mt-[48px] md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[50px]">
+                            <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="w-[120px] h-[40px] bg-[#4177DC] rounded-[4px] mt-[32px] md:hidden ">
+                    <p class="text-15px">View More</p>
                 </button>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="h-[636px] flex flex-col items-center">
-        <div class="w-[350px] text-3xl flex flex-col items-center mt-[72px] gap-2">
-            <p>Choose Your Electric Car</p>
-            <p>Of The Porsche Brand</p>
-        </div>
-        <div class="w-[918px] h-[328px] flex justify-between gap-[48px] text-[24px] mt-[64px]">
-            <div class="w-[258px] bg-[#111213] pt-[32px] pl-[25px] rounded-[20px]">
-                <p>Porsche</p>
-                <p class="text-[16px] text-[#BABEC4]">Turbo S</p>
-                <div class="mt-[12px] ml-[32px]"><img src="picture/brand1.png " alt="">
-                </div>
-                <div class="h-[18px] w-[180px] flex gap-[20px] mt-[20px]">
-                    <div class="h-[16px] w-[80px] flex gap-[5px]">
-                        <img src="picture/kongtor.png" alt="">
-                        <p class="text-[13px]">3.7 Sec</p>
+                <!-- Card 2 -->
+                <div
+                    class="hidden md:block md:w-[258px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[25px] rounded-[20px] mb-6 md:mb-0">
+                    <p>Porsche</p>
+                    <p class="text-sm md:text-[16px] text-[#BABEC4]">Taycan</p>
+                    <div class="mt-3 md:mt-[12px] ml-6 md:ml-[32px]"><img src="picture/brand2.png" alt=""></div>
+                    <div class="h-4 md:h-[18px] w-full md:w-[180px] flex gap-4 md:gap-[20px] mt-4 md:mt-[20px]">
+                        <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/kongtor.png" alt="">
+                            <p class="text-xs md:text-[13px]">3.7 Sec</p>
+                        </div>
+                        <div class="h-4 md:h-[16px] w-24 md:w-[90px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/speed.png" alt="">
+                            <p class="text-xs md:text-[13px]">356 Km/h</p>
+                        </div>
                     </div>
-                    <div class="h-[16px] w-[90px] flex gap-[5px]">
-                        <img src="picture/speed.png" alt="">
-                        <p class="text-[13px]">356 Km/h</p>
+                    <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px] mt-2 md:mt-[8px]">
+                        <img src="picture/fuel.png" alt="">
+                        <p class="text-xs md:text-[13px]">Electric</p>
                     </div>
-                </div>
-                <div class="h-[16px] w-[80px] flex gap-[5px] mt-[8px]">
-                    <img src="picture/fuel.png" alt="">
-                    <p class="text-[13px]">Electric</p>
-                </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-[20px] mt-[31px] w-[90px]">$175,900</p>
-                    <button
-                        class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px]  rounded-br-[20px] flex items-center justify-center mt-[33px]">
-                        <img class="w-[24px]" src="picture/shop.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="w-[258px] bg-[#111213] pt-[32px] pl-[25px] rounded-[20px]">
-                <p>Porsche</p>
-                <p class="text-[16px] text-[#BABEC4]">Taycan</p>
-                <div class="mt-[12px] ml-[32px]"><img src="picture/brand2.png " alt="">
-                </div>
-                <div class="h-[18px] w-[180px] flex gap-[20px] mt-[20px]">
-                    <div class="h-[16px] w-[80px] flex gap-[5px]">
-                        <img src="picture/kongtor.png" alt="">
-                        <p class="text-[13px]">3.7 Sec</p>
-                    </div>
-                    <div class="h-[16px] w-[90px] flex gap-[5px]">
-                        <img src="picture/speed.png" alt="">
-                        <p class="text-[13px]">356 Km/h</p>
-                    </div>
-                </div>
-                <div class="h-[16px] w-[80px] flex gap-[5px] mt-[8px]">
-                    <img src="picture/fuel.png" alt="">
-                    <p class="text-[13px]">Electric</p>
-                </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-[20px] mt-[31px] w-[90px]">$114,900</p>
-                    <button
-                        class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px]  rounded-br-[20px] flex items-center justify-center mt-[33px]">
-                        <img class="w-[24px]" src="picture/shop.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="w-[258px] bg-[#111213] pt-[32px] pl-[25px] rounded-[20px]">
-                <p>Porsche</p>
-                <p class="text-[16px] text-[#BABEC4]">Turbo S Cross</p>
-                <div class="mt-[12px] ml-[32px]"><img src="picture/brand3.png " alt="">
-                </div>
-                <div class="h-[18px] w-[180px] flex gap-[20px] mt-[20px]">
-                    <div class="h-[16px] w-[80px] flex gap-[5px]">
-                        <img src="picture/kongtor.png" alt="">
-                        <p class="text-[13px]">3.7 Sec</p>
-                    </div>
-                    <div class="h-[16px] w-[90px] flex gap-[5px]">
-                        <img src="picture/speed.png" alt="">
-                        <p class="text-[13px]">356 Km/h</p>
-                    </div>
-                </div>
-                <div class="h-[16px] w-[80px] flex gap-[5px] mt-[8px]">
-                    <img src="picture/fuel.png" alt="">
-                    <p class="text-[13px]">Electric</p>
-                </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-[20px] mt-[31px] w-[90px]">$175,900</p>
-                    <button
-                        class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px]  rounded-br-[20px] flex items-center justify-center mt-[33px]">
-                        <img class="w-[24px]" src="picture/shop.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[609px] mt-[72px] flex flex-col">
-        <p class="flex justify-center items-center text-[24px]">More Features</p>
-        <div class="h-[705px] w-[950px] bg-[url('picture/Map.png')] bg-cover bg-center rotate-11 ml-[170px]">
-
-            <div class="w-[354px] h-[462px] mt-[90px] ml-[308px] rotate-349 ">
-                <img src="picture/Data features.png" alt="">
-
-            </div>
-        </div>
-    </div>
-    <div class="h-[1046px] mt-[72px] text-[24px] flex flex-col">
-        <p class="flex justify-center">Featured Luxury Cars</p>
-        <div class="flex justify-center items-center">
-            <div class="w-[304px] h-[52px] mt-[48px] flex gap-[32px]">
-                <button class="w-[52px] bg-[#4177DC] rounded-[16px]">
-                    <p class="text-[16px]">All</p>
-                </button>
-                <img class="w-[52px]" src="picture/logoV.png" alt="">
-                <img class="w-[52px]" src="picture/5circle.png" alt="">
-                <img class="w-[52px]" src="picture/logoHorse.png" alt="">
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="w-[888px] h-[312px] flex gap-[72px] mt-[72px]">
-                <div class="w-[248px] bg-[#111213] pt-[32px] pl-[24px] rounded-[20px]">
-                    <p>Tesla</p>
-                    <p class="text-[16px] text-[#BABEC4]">Model X</p>
-                    <div class="mt-[32px] "><img src="picture/tesla.png " alt=""></div>
                     <div class="flex justify-between items-center">
-                        <p class="text-[20px] mt-[38px] w-[180px]">$98,900</p>
+                        <p class="text-base md:text-[20px] mt-6 md:mt-[31px] w-24 md:w-[90px]">$114,900</p>
                         <button
-                            class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[46px]">
-                            <img class="w-[24px]" src="picture/shop.png" alt="">
+                            class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-6 md:mt-[33px]">
+                            <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
                         </button>
                     </div>
                 </div>
-                <div class="w-[248px] bg-[#111213] pt-[32px] pl-[24px] rounded-[20px]">
-                    <p>Tesla</p>
-                    <p class="text-[16px] text-[#BABEC4]">Model 3</p>
-                    <div class="mt-[32px] "><img src="picture/tesla1.png " alt=""></div>
-                    <div class="flex justify-between items-center">
-                        <p class="text-[20px] mt-[38px] w-[180px]">$45,900</p>
-                        <button
-                            class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[46px]">
-                            <img class="w-[24px]" src="picture/shop.png" alt="">
-                        </button>
+                <!-- Card 3 -->
+                <div
+                    class="hidden md:block md:w-[258px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[25px] rounded-[20px]">
+                    <p>Porsche</p>
+                    <p class="text-sm md:text-[16px] text-[#BABEC4]">Turbo S Cross</p>
+                    <div class="mt-3 md:mt-[12px] ml-6 md:ml-[32px]"><img src="picture/brand3.png" alt=""></div>
+                    <div class="h-4 md:h-[18px] w-full md:w-[180px] flex gap-4 md:gap-[20px] mt-4 md:mt-[20px]">
+                        <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/kongtor.png" alt="">
+                            <p class="text-xs md:text-[13px]">3.7 Sec</p>
+                        </div>
+                        <div class="h-4 md:h-[16px] w-24 md:w-[90px] flex gap-1 md:gap-[5px]">
+                            <img src="picture/speed.png" alt="">
+                            <p class="text-xs md:text-[13px]">356 Km/h</p>
+                        </div>
                     </div>
-                </div>
-                <div class="w-[248px] bg-[#111213] pt-[32px] pl-[24px] rounded-[20px]">
-                    <p>Audi</p>
-                    <p class="text-[16px] text-[#BABEC4]">E-tran</p>
-                    <div class="mt-[32px] "><img src="picture/tesla2.png " alt=""></div>
+                    <div class="h-4 md:h-[16px] w-20 md:w-[80px] flex gap-1 md:gap-[5px] mt-2 md:mt-[8px]">
+                        <img src="picture/fuel.png" alt="">
+                        <p class="text-xs md:text-[13px]">Electric</p>
+                    </div>
                     <div class="flex justify-between items-center">
-                        <p class="text-[20px] mt-[38px] w-[180px]">$145,900</p>
+                        <p class="text-base md:text-[20px] mt-6 md:mt-[31px] w-24 md:w-[90px]">$175,900</p>
                         <button
-                            class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[46px]">
-                            <img class="w-[24px]" src="picture/shop.png" alt="">
+                            class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-6 md:mt-[33px]">
+                            <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-[568px] h-[312px] flex gap-[72px] ml-[195px] mt-[72px]">
-            <div class="w-[248px] bg-[#111213] pt-[32px] pl-[24px] rounded-[20px]">
-                <p>Porsche</p>
-                <p class="text-[16px] text-[#BABEC4]">Boxster 987</p>
-                <div class="mt-[32px] "><img src="picture/porsche1.png " alt=""></div>
-                <div class="flex justify-between items-center">
-                    <p class="text-[20px] mt-[38px] w-[180px]">$126,900</p>
-                    <button
-                        class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[46px]">
-                        <img class="w-[24px]" src="picture/shop.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="w-[248px] bg-[#111213] pt-[32px] pl-[24px] rounded-[20px]">
-                <p>Porsche</p>
-                <p class="text-[16px] text-[#BABEC4]">Panamera</p>
-                <div class="mt-[32px] "><img src="picture/porsche2.png " alt=""></div>
-                <div class="flex justify-between items-center">
-                    <p class="text-[20px] mt-[38px] w-[180px]">$126,900</p>
-                    <button
-                        class="w-[56px] h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[46px]">
-                        <img class="w-[24px]" src="picture/shop.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[392px] bg-[url('picture/bg.png')] bg-cover bg-center">
-        <div class="flex justify-center gap-[80px]">
-            <div class="h-[264px] my-[64px]">
-                <div class="flex flex-col ">
-                    <div class="w-[312px] h-[68px]">
-                        <p class="text-[24px]">Do You Want To Receive Special Offers?</p>
-                    </div>
-                    <div class="w-[375px] h-[66px] text-[#BABEC4] mt-[32px]">
-                        <p>Be the first to receive all the information about our products and new cars by email by
-                            subscribing to our mailing list.</p>
-                    </div>
-                    <button class="w-[174px] h-[50px] bg-[#4177DC] mt-[48px] rounded-[5px]">Subscribe Now</button>
-                </div>
-            </div>
-            <img src="picture/bigCar.png" alt="" class="h-[201px] my-[95px]">
-        </div>
-    </div>
-    <div class="h-[204px] ">
-        <div class="flex justify-center pt-[68px]">
-            <div class="w-[830px] h-[57px] flex gap-[106px] items-center justify-center">
-                <img src="picture/logo1.png" alt="" class="w-[50px] h-[50px]">
-                <img src="picture/logo2.png" alt="" class="w-[50px] h-[18px]">
-                <img src="picture/logo3.png" alt="" class="w-[50px] h-[50px]">
-                <img src="picture/logo4.png" alt="" class="w-[50px] h-[50px]">
-                <img src="picture/logo5.png" alt="" class="w-[50px] h-[50px]">
-                <img src="picture/logo6.png" alt="" class="w-[50px] h-[50px]">
-            </div>
-        </div>
-    </div>
-    <div class="h-[395px] mt-[72px]">
-        <div class="flex gap-[166px] justify-center">
-            <div class="w-[198px] h-[112px]">
-                <div class="w-[110px] h-[34px] flex">
-                    <img src="picture/wheelLogo.png" alt="" class="w-[32px]">
-                    <p class="w-[70px] h-[34px] text-[24px]">Elecar</p>
-                </div>
-                <div class="w-[198px] h-[54px] text-[13px] text-[#BABEC4] mt-[24px]">
-                    We offer the best electric cars of the most recognized brands in the world.
-                </div>
-            </div>
-            <div class="w-[88px] h-[176px] flex flex-col gap-[22px]">
-                <p class="text-[20px]">Company</p>
-                <div class="w-[53px] h-[124px] flex flex-col gap-[10px] text-[16px] text-[#BABEC4]">
-                    <p class="">About</p>
-                    <p class="">Cars</p>
-                    <p class="">History</p>
-                    <p class="">Shop</p>
-                </div>
-            </div>
-            <div class="w-[120px] h-[176px] flex flex-col gap-[22px]">
-                <p class="text-[20px]">Information</p>
-                <div class="w-[120px] h-[124px] flex flex-col gap-[10px] text-[16px] text-[#BABEC4]">
-                    <p class="">Request a quote</p>
-                    <p class="">Find a dealer</p>
-                    <p class="">Contact us</p>
-                    <p class="">Services</p>
-                </div>
-            </div>
-            <div class="w-[120px] h-[76px] flex flex-col gap-[22px]">
-                <p class="text-[20px]">Follow us</p>
-                <div class="w-[120px] h-[24px] flex gap-[24px]">
-                    <img src="picture/facebook.png" alt="" class="w-[24px]">
-                    <img src="picture/ig.png" alt="" class="w-[24px]">
-                    <img src="picture/twitter.png" alt="" class="w-[24px]">
-                </div>
-            </div>
-        </div>
-        <div class="h-[17px] flex justify-center mt-[98px]">
-            <div class="w-[200px] flex gap-[4px]">
-                <img src="picture/copyright.png" alt="" class="w-[17px]">
-                <p class="text-[12px] text-[#888B91] w-[169px]">Bedimcode. All rights reserved</p>
-            </div>
-        </div>
+        <div class="md:h-[713px] md:w-full h-[575px] w-[450px] my-[32px] md:mt-[72px] flex flex-col">
+            <div class="md:flex md:justify-center flex justify-center ">
+                <p class="md:flex md:items-center md:w-[162px] text-lg md:text-[24px]">More Features</p>
 
+            </div>
+            <div
+                class="h-[487px] w-[450px] flex justify-center md:h-[705px] md:w-[950px] md:flex md:justify-center bg-[url('picture/Map.png')] bg-cover bg-center md:ml-[170px]">
+                <div class="w-[282px] h-[346px] mt-[94px] md:w-[354px] md:h-[462px] md:mt-[154px]">
+                    <img src="picture/Data features.png" alt="" class="w-full h-full object-contain">
+                </div>
+            </div>
+        </div>
+        <div class="h-auto md:h-[1046px] mt-10 md:mt-[72px] text-lg md:text-[24px] flex flex-col">
+            <p class="flex justify-center">Featured Luxury Cars</p>
+            <div class="flex justify-center items-center">
+                <div
+                    class="w-[240px] h-[48px] md:w-[304px] md:h-[52px] mt-[48px] md:mt-[48px] flex gap-4 md:gap-[32px]">
+                    <button class="w-[48px] md:w-[52px] bg-[#4177DC] rounded-[16px]">
+                        <p class="text-xs md:text-[16px]">All</p>
+                    </button>
+                    <img class="w-[48px] md:w-[52px]" src="picture/logoV.png" alt="">
+                    <img class="w-[48px] md:w-[52px]" src="picture/5circle.png" alt="">
+                    <img class="w-[48px] md:w-[52px]" src="picture/logoHorse.png" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center">
+                <div
+                    class="w-full flex items-center md:w-[888px] h-auto md:h-[312px] flex flex-col md:flex-row gap-[40px] md:gap-[72px] mt-[58px] md:mt-[72px] px-4 md:px-0">
+                    <!-- Card 1 -->
+                    <div
+                        class="w-[228px] h-[279px] md:w-[248px] md:h-[312px] bg-[#111213] pt-[41px] md:pt-[32px] pl-4 md:pl-[24px] rounded-[20px]">
+                        <p>Tesla</p>
+                        <p class="text-sm md:text-[16px] text-[#BABEC4]">Model X</p>
+                        <div class="mt-6 md:mt-[32px]"><img src="picture/tesla.png" alt=""></div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-base md:text-[20px] mt-8 md:mt-[38px] w-32 md:w-[180px]">$98,900</p>
+                            <button
+                                class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-8 md:mt-[45px]">
+                                <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="w-[228px] h-[279px] md:w-[248px] md:h-[312px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[24px] rounded-[20px]">
+                        <p>Tesla</p>
+                        <p class="text-sm md:text-[16px] text-[#BABEC4]">Model 3</p>
+                        <div class="mt-6 md:mt-[32px]"><img src="picture/tesla1.png" alt=""></div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-base md:text-[20px] mt-[42px] md:mt-[38px] w-32 md:w-[180px]">$45,900</p>
+                            <button
+                                class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[47px] md:mt-[43px]">
+                                <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="w-[228px] h-[279px] md:w-[248px] md:h-[312px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[24px] rounded-[20px]">
+                        <p>Audi</p>
+                        <p class="text-sm md:text-[16px] text-[#BABEC4]">E-tran</p>
+                        <div class="mt-6 md:mt-[32px]"><img src="picture/tesla2.png" alt=""></div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-base md:text-[20px] mt-[56px] md:mt-[53px] w-32 md:w-[180px]">$175,900</p>
+                            <button
+                                class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[62px] md:mt-[58px]">
+                                <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full flex items-center md:w-[568px] h-auto md:h-[312px] flex flex-col md:flex-row gap-[10px] md:gap-[72px] ml-0 md:ml-[195px] mt-8 md:mt-[72px] px-4 md:px-0">
+                <div
+                    class="w-[228px] h-[279px] md:w-[248px] md:h-[312px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[24px] rounded-[20px] mb-6 md:mb-0">
+                    <p>Porsche</p>
+                    <p class="text-sm md:text-[16px] text-[#BABEC4]">Boxster 987</p>
+                    <div class="mt-6 md:mt-[32px]"><img src="picture/porsche1.png" alt=""></div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-base md:text-[20px] mt-[56px] md:mt-[53px] w-32 md:w-[180px]">$126,900</p>
+                        <button
+                            class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[62px] md:mt-[58px]">
+                            <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="w-[228px] h-[279px] md:w-[248px] md:h-[312px] bg-[#111213] pt-6 md:pt-[32px] pl-4 md:pl-[24px] rounded-[20px] mb-6 md:mb-0">
+                    <p>Porsche</p>
+                    <p class="text-sm md:text-[16px] text-[#BABEC4]">Panamera</p>
+                    <div class="mt-6 md:mt-[32px]"><img src="picture/porsche2.png" alt=""></div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-base md:text-[20px] mt-[56px] md:mt-[53px] w-32 md:w-[180px]">$126,900</p>
+                        <button
+                            class="w-12 md:w-[56px] h-10 md:h-[48px] bg-[#4177DC] rounded-tl-[20px] rounded-br-[20px] flex items-center justify-center mt-[62px] md:mt-[58px]">
+                            <img class="w-6 md:w-[24px]" src="picture/shop.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[448px] h-[580px] md:w-[1280px] md:h-[392px] bg-[url('picture/bg.png')] bg-cover bg-center mt-10">
+            <div class="flex flex-col md:flex-row md:gap-[32px] justify-center">
+                <div class="h-auto w-full md:w-[375px] md:h-[264px] my-[44px] md:my-[64px]">
+                    <div class="md:flex md:flex-col md:flex-end">
+                        <div class="w-full h-[56px] md:w-[312px] md:h-[68px]">
+                            <p class="hidden md:block md:text-[24px]">Do You Want To Receive Special Offers?</p>
+                            <p class="md:hidden flex justify-center text-[20px] w-[]">Do You Want To Receive</p>
+                            <p class="md:hidden flex justify-center text-[20px]">Special Offers?</p>
+
+                        </div>
+                        <div class="w-full h-[100px] md:w-[375px] md:h-[66px] text-[#BABEC4] mt-4 md:mt-[32px]">
+                            <p class="hidden md:block">Be the first to receive all the information about our products
+                                and new cars by email by
+                                subscribing to our mailing list.</p>
+                            <div class="md:hidden flex flex-col items-center mt-[32px]">
+                                <p>Be the first to receive all the information</p>
+                                <p>about our products and new cars by email</p>
+                                <p>by subscribing to our mailing list.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center md:block">
+                            <button
+                                class="w-[120px] h-[40px] md:w-[174px] md:h-[50px] bg-[#4177DC] mt-[40px] md:mt-[48px] rounded-[5px] ">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img src="picture/bigCar.png" alt=""
+                    class="w-[400px] h-[175px] ml-[48px] md:w-[450px] md:h-[201px] md:my-[95px]">
+            </div>
+        </div>
+        <div class="h-[269px] md:h-[204px]">
+            <div class="flex justify-center pt-[64px] md:pt-[68px]">
+                <div class="hidden md:block md:w-[830px] md:h-[57px] md:gap-[106px] md:flex md:items-center">
+                    <img src="picture/logo1.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                    <img src="picture/logo2.png" alt="" class="w-[40px] md:w-[50px] h-[14px] md:h-[18px]">
+                    <img src="picture/logo3.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                    <img src="picture/logo4.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                    <img src="picture/logo5.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                    <img src="picture/logo6.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                </div>
+                <div class="md:hidden w-[248px] flex items-center gap-6 h-[157px]">
+                    <div class="flex flex-col gap-[60px]">
+                        <div class="flex gap-[64px] items-center">
+                            <img src="picture/logo1.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                            <img src="picture/logo2.png" alt="" class="w-[40px] md:w-[50px] h-[14px] md:h-[18px]">
+                            <img src="picture/logo3.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                        </div>
+                        <div class="flex gap-[64px] items-center">
+                            <img src="picture/logo4.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                            <img src="picture/logo5.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+                            <img src="picture/logo6.png" alt="" class="w-[40px] md:w-[50px] h-[40px] md:h-[50px]">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-[677px] mt-[56px] md:h-[395px] md:mt-[72px]">
+            <div class="flex flex-col md:flex-row gap-8 md:gap-[166px] justify-center">
+                <div class="w-[201px] h-[102px] md:w-[198px] md:h-[112px] ml-[24px]">
+                    <div class="w-[110px] h-[34px] flex gap-[4px]">
+                        <img src="picture/wheelLogo.png" alt="" class="w-[24px] h-[24px] md:w-[32px] md:h-[32px]">
+                        <p class="w-[70px] h-[34px] text-lg md:text-[24px]">Elecar</p>
+                    </div>
+                    <div
+                        class="w-full md:w-[198px] h-auto md:h-[54px] text-xs md:text-[13px] text-[#BABEC4] mt-4 md:mt-[24px]">
+                        We offer the best electric cars of the most recognized brands in the world.
+                    </div>
+                </div>
+                <div class="w-full md:w-[88px] h-auto md:h-[176px] flex flex-col gap-4 md:gap-[22px] ml-[24px]">
+                    <p class="text-base md:text-[20px]">Company</p>
+                    <div
+                        class="w-full md:w-[53px] h-auto md:h-[124px] flex flex-col gap-2 md:gap-[10px] text-sm md:text-[16px] text-[#BABEC4]">
+                        <p>About</p>
+                        <p>Cars</p>
+                        <p>History</p>
+                        <p>Shop</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-[120px] h-auto md:h-[176px] flex flex-col gap-4 md:gap-[22px] ml-[24px]">
+                    <p class="text-base md:text-[20px]">Information</p>
+                    <div
+                        class="w-full md:w-[120px] h-auto md:h-[124px] flex flex-col gap-2 md:gap-[10px] text-sm md:text-[16px] text-[#BABEC4]">
+                        <p>Request a quote</p>
+                        <p>Find a dealer</p>
+                        <p>Contact us</p>
+                        <p>Services</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-[120px] h-auto md:h-[76px] flex flex-col gap-4 md:gap-[22px] ml-[24px]">
+                    <p class="text-base md:text-[20px]">Follow us</p>
+                    <div class="w-full md:w-[120px] h-6 md:h-[24px] flex gap-4 md:gap-[24px]">
+                        <img src="picture/facebook.png" alt="" class="w-6 md:w-[24px]">
+                        <img src="picture/ig.png" alt="" class="w-6 md:w-[24px]">
+                        <img src="picture/twitter.png" alt="" class="w-6 md:w-[24px]">
+                    </div>
+                </div>
+            </div>
+            <div class="h-4 md:h-[17px] flex justify-center mt-8 md:mt-[98px]">
+                <div class="w-[200px] md:w-[200px] flex gap-1 md:gap-[4px]">
+                    <img src="picture/copyright.png" alt="" class="w-4 md:w-[17px]">
+                    <p class="text-xs md:text-[12px] text-[#888B91] w-[200px] md:w-[169px]">Bedimcode. All rights
+                        reserved</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
