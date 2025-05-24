@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation and Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black transition-colors duration-500">
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-8" id="page">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold mb-4">Nget Darapich</h1>
+
+        <!-- Message -->
+        <p id="main-message" class="text-[24px] font-semi mb-4">Welcome to my webpage!</p>
+
+        <!-- Buttons -->
+        <div class="space-x-4">
+            <button id="changeBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Change
+                Message</button>
+            <button id="surpriseBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Show
+                Surprise</button>
+            <button id="toggleBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Toggle
+                Mode</button>
+        </div>
+        <!-- Surprise message (hidden by default) -->
+        <p id="surprise-message" class="text-md text-white-600 font-semibold mt-4 hidden">
+            🎉 Surprise! You're doing great!
+        </p>
+
+    </div>
+
+    <script>
+        const changeBtn = document.getElementById('changeBtn');
+        const surpriseBtn = document.getElementById('surpriseBtn');
+        const toggleBtn = document.getElementById('toggleBtn');
+
+        const mainMessage = document.getElementById('main-message');
+        const surpriseMessage = document.getElementById('surprise-message');
+        const body = document.body;
+
+        // Change Message
+        changeBtn.addEventListener('click', () => {
+            mainMessage.textContent = "You've just changed the message!";
+        });
+
+        // Show Surprise
+        surpriseBtn.addEventListener('click', () => {
+            surpriseMessage.classList.remove('hidden');
+        });
+
+        // Toggle Mode
+        let isDark = false;
+        toggleBtn.addEventListener('click', () => {
+            isDark = !isDark;
+            if (isDark) {
+                body.classList.remove('bg-white', 'text-black');
+                body.classList.add('bg-black', 'text-white');
+            } else {
+                body.classList.remove('bg-black', 'text-white');
+                body.classList.add('bg-white', 'text-black');
+            }
+        });
+    </script>
+</body>
+
+</html>
