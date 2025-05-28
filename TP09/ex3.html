@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex items-start justify-center pt-16">
+    <div class="w-full max-w-xl bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold mb-2">Todo List</h1>
+        <hr class="mb-6">
+
+        <div class="flex gap-6 mb-6">
+            <div class="flex-1 border-2 border-red-400 rounded-lg py-2 px-4 flex flex-col items-center">
+                <span class="text-gray-700 font-medium">Completed</span>
+                <span class="text-red-600 font-bold text-xl" id="completedCount">0</span>
+            </div>
+            <div class="flex-1 border-2 border-red-400 rounded-lg py-2 px-4 flex flex-col items-center">
+                <span class="text-gray-700 font-medium">Remaining</span>
+                <span class="text-red-600 font-bold text-xl" id="remainingCount">0</span>
+            </div>
+            <div class="flex-1 border-2 border-red-400 rounded-lg py-2 px-4 flex flex-col items-center">
+                <span class="text-gray-700 font-medium">All Tasks</span>
+                <span class="text-red-600 font-bold text-xl" id="allTasksCount">0</span>
+            </div>
+        </div>
+
+        <div class="flex mb-6">
+            <input class="flex-1 border border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" id="taskInput" placeholder="Enter a task">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-r font-medium flex items-center gap-2" id="addTaskBtn">
+                New task <span class="text-lg">➕</span>
+            </button>
+        </div>
+
+        <div class="space-y-2" id="taskList"></div>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addTaskBtn = document.getElementById("addTaskBtn");
+        const taskList = document.getElementById("taskList");
+
+        const completedCount = document.getElementById("completedCount");
+        const remainingCount = document.getElementById("remainingCount");
+        const allTasksCount = document.getElementById("allTasksCount");
+
+        let allTasks = 0;
+        let remainingTasks = 0;
+        let completedTasks = 0;
+
+        addTaskBtn.onclick = function () {
+            const inputTask = taskInput.value.trim();
+            if (inputTask === "") return;
+
+            let newTask = document.createElement("div");
+            newTask.className = "flex items-center gap-3 bg-white rounded px-3 py-2 shadow-sm";
+
+            let trashIcon = document.createElement("button");
+            trashIcon.innerHTML = "🗑️";
+            trashIcon.className = "delete text-gray-400 hover:text-red-500";
+            trashIcon.style.fontSize = "1.1rem";
+
+            let checkBox = document.createElement("input");
+            checkBox.type = "checkbox";
+            checkBox.className = "form-checkbox h-5 w-5 text-blue-600 rounded border-gray-300";
+
+            let task = document.createElement("label");
+            task.innerHTML = inputTask;
+            task.className = "ml-1 text-gray-800";
+
+            newTask.appendChild(trashIcon);
+            newTask.appendChild(checkBox);
+            newTask.appendChild(task);
+
+            taskList.appendChild(newTask);
+
+            allTasks++;
+            remainingTasks++;
+            updateCounts();
+
+            trashIcon.onclick = function () {
+                if (!checkBox.checked) {
+                    remainingTasks--;
+                } else {
+                    completedTasks--;
+                }
+                allTasks--;
+                taskList.removeChild(newTask);
+                updateCounts();
+            }
+
+            checkBox.addEventListener("change", function () {
+                if (checkBox.checked) {
+                    task.classList.add("line-through", "text-gray-400");
+                    completedTasks++;
+                    remainingTasks--;
+                } else {
+                    task.classList.remove("line-through", "text-gray-400");
+                    completedTasks--;
+                    remainingTasks++;
+                }
+                updateCounts();
+            });
+
+            taskInput.value = "";
+        }
+
+        function updateCounts() {
+            completedCount.textContent = completedTasks;
+            remainingCount.textContent = remainingTasks;
+            allTasksCount.textContent = allTasks;
+        }
+    </script>
+</body>
+
+</html>

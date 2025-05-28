@@ -4,35 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
 
-<body>''
-
-    <div class="">
-        the capital of cambodia is phnom penh.
+<body class="bg-[#EFDFD9] w-[1440px] min-h-screen flex justify-center ">
+    <div class="w-[860px] h-[330px] bg-[#FFFFFF] mt-[193px] flex flex-col items-center pt-[56px]">
+        <div class="text-[48px] text-[#000000] font-[Exo]">True or False?</div>
+        <div class="text-[32px]">
+            the capital of cambodia is phnom penh.
+        </div>
+        <div class="flex justify-between gap-[147px] mt-[20px] mt-[40px]">
+            <button class="true bg-[#1ECA21] w-[160px] h-[60px] text-white text-[16px]" onclick="clickOnTrue()">True</button>
+            <button class="false bg-[#F50808] w-[160px] h-[60px] text-white text-[16px]" onclick="clickOnFalse()">False</button>
+        </div>
+        <div class="result"></div>
+        <script>
+            // document.querySelector(".true").onclick = function () {
+            //     let result = document.querySelector(".result");
+            //     result.innerHTML = "✅Corrrect!";
+            //     result.style.color = "green";
+            // }
+            // document.querySelector(".false").onclick = function () {
+            //     let result = document.querySelector(".result");
+            //     result.innerHTML = "False!";
+            //     result.style.color = "red";
+            // }
+            function clickOnTrue() {
+                let result = document.querySelector(".result");
+                result.innerHTML = "✅Corrrect!";
+                result.style.color = "green";
+            }
+            function clickOnFalse() {
+                let result = document.querySelector(".result");
+                result.innerHTML = "❌Wrong!";
+                result.style.color = "red";
+            }
+        </script>
     </div>
-    <button class="true">True</button>
-    <button class="false" onclick="clickOnFalse()">False</button>
-    <div class="result"></div>
-    <script>
-        document.querySelector(".true").onclick = function () {
-            let result = document.querySelector(".result");
-            result.innerHTML = "Corrrect!";
-            result.style.color = "green";
-        }
-        // document.querySelector(".false").onclick = function () {
-        //     let result = document.querySelector(".result");
-        //     result.innerHTML = "False!";
-        //     result.style.color = "red";
-        // }
-        function clickOnFalse() {
-            let result = document.querySelector(".result");
-            result.innerHTML = "False!";
-            result.style.color = "red";
-        }
 
-    </script>
 </body>
 
 </html>
