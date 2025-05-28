@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <textarea name="" class="inputText" oninput = "counting()" id="" style="width: 400px; height: 300px;"></textarea>
-    <div class="countWord"></div>
-    <div class="countCharacter"></div>
-    
-    <script>
-        function counting(){
-            let inputText = document.querySelector(".inputText").value;
-            let countCharacter = document.querySelector(".countCharacter");
-            countCharacter.innerHTML = "Characters: "+inputText.length;
+    <p class="text-[26px] font-bold flex justify-center items-center my-[40px]">Live Word & Character Counter</p>
+    <div class="flex flex-col">
+        <div class="flex justify-center items-center">
+            <textarea name="" class="inputText" oninput="counting()" id=""
+                style="width: 400px; height: 300px;border-color: black;"></textarea>
+        </div>
+        <div class="flex flex-col ml-[580px] mt[40px] gap-[5px]">
+            <div class="countWord "></div>
+            <div class="countCharacter"></div>
+        </div>
 
-            let countWord = document.querySelector(".countWord");
-            const count = (inputText) => inputText.trim().split(/\s+/).length;
-            countWord.innerHTML = "Words: "+count(inputText);
-        }
-        
 
-    </script>
+        <script>
+            function counting() {
+                let inputText = document.querySelector(".inputText").value;
+                let countCharacter = document.querySelector(".countCharacter");
+                countCharacter.innerHTML = "Characters: " + inputText.length;
+
+                let countWord = document.querySelector(".countWord");
+                const count = (inputText) => inputText.trim().split(/\s+/).length;
+                countWord.innerHTML = "Words: " + count(inputText);
+            }
+
+
+        </script>
+    </div>
+
 </body>
+
 </html>
