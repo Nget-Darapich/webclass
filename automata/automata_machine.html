@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finite Automata Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Finite Automata Tool</h1>
+
+        <!-- Design FA -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Design FA</h2>
+            <input id="stateInput" type="text" placeholder="States (e.g. q0,q1,q2)" class="border p-2 w-full mb-2">
+            <input id="alphabetInput" type="text" placeholder="Alphabet (e.g. a,b)" class="border p-2 w-full mb-2">
+            <input id="startStateInput" type="text" placeholder="Start State (e.g. q0)" class="border p-2 w-full mb-2">
+            <input id="acceptStatesInput" type="text" placeholder="Accept States (e.g. q2)"
+                class="border p-2 w-full mb-2">
+            <textarea id="transitionInput"
+                placeholder="Transitions (e.g. q0,a,q1)\nUse multiple lines for more transitions"
+                class="border p-2 w-full mb-2" rows="4"></textarea>
+            <button onclick="buildFA()" class="bg-blue-500 text-white px-4 py-2 rounded">Build FA</button>
+        </div>
+
+        <!-- Test String -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Test String</h2>
+            <input id="testString" type="text" placeholder="Enter string to test (e.g. aba)"
+                class="border p-2 w-full mb-2">
+            <button onclick="testStringAcceptance()" class="bg-green-500 text-white px-4 py-2 rounded">Test</button>
+            <div id="result" class="mt-2 font-bold"></div>
+        </div>
+
+        <!-- Determine if DFA or NFA -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">FA Type Check</h2>
+            <button onclick="checkFAType()" class="bg-purple-500 text-white px-4 py-2 rounded">Check if DFA or
+                NFA</button>
+            <div id="typeResult" class="mt-2 font-bold"></div>
+        </div>
+
+        <!-- Convert to DFA -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Convert NFA to DFA</h2>
+            <button onclick="convertToDFA()" class="bg-yellow-500 text-white px-4 py-2 rounded">Convert</button>
+            <pre id="dfaOutput" class="mt-2 bg-gray-100 p-2 rounded text-sm"></pre>
+        </div>
+
+        <!-- Minimize DFA -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Minimize DFA</h2>
+            <button onclick="minimizeDFA()" class="bg-red-500 text-white px-4 py-2 rounded">Minimize</button>
+            <pre id="minDfaOutput" class="mt-2 bg-gray-100 p-2 rounded text-sm"></pre>
+        </div>
+    </div>
+
+    <script>
+        let automaton = {
+            states: [],
+            alphabet: [],
+            transitions: {},
+            startState: '',
+            acceptStates: []
+        };
+
+        let dfa = null; // To store DFA result globally
+        let checkDFA = null; // To check if the automaton is DFA
+        function buildFA() {
+            automaton.states = document.getElementById("stateInput").value.split(',').map(s => s.trim());
+            automaton.alphabet = document.getElementById("alphabetInput").value.split(',').map(s => s.trim());
+            automaton.startState = document.getElementById("startStateInput").value.trim();
+            automaton.acceptStates = document.getElementById("acceptStatesInput").value.split(',').map(s => s.trim());
+            automaton.transitions = {};
+
+            const transitionLines = document.getElementById("transitionInput").value.split('\n');
+            for (const line of transitionLines) {
+                const [from, symbol, to] = line.split(',').map(x => x.trim());
+                if (!automaton.transitions[from]) automaton.transitions[from] = {};
+                if (!automaton.transitions[from][symbol]) automaton.transitions[from][symbol] = [];
+                automaton.transitions[from][symbol].push(to);
+            }
+
+            alert("FA Built Successfully!");
+        }
+
+        function testStringAcceptance() {
+            const input = document.getElementById("testString").value;
+            const visited = new Set();
+            const result = nfaAccepts(automaton.startState, input, 0, visited);
+            document.getElementById("result").innerText = result ? `Accepted` : `Rejected`;
+        }
+
+        function nfaAccepts(state, input, index, visited) {
+            const key = `${state}-${index}`;
+            if (visited.has(key)) return false;
+            visited.add(key);
+            if (index === input.length) return automaton.acceptStates.includes(state);
+
+            const symbol = input[index];
+            const nextStates = (automaton.transitions[state] && automaton.transitions[state][symbol]) || [];
+
+            for (const nextState of nextStates) {
+                if (nfaAccepts(nextState, input, index + 1, visited)) return true;
+            }
+            return false;
+        }
+
+        function checkFAType() {
+            for (const state in automaton.transitions) {
+                for (const symbol in automaton.transitions[state]) {
+                    const nextStates = automaton.transitions[state][symbol];
+                    if (nextStates.length !== 1 || symbol === 'ε') {
+                        document.getElementById("typeResult").innerText = "This is an NFA";
+                        return;
+                    }
+                }
+            }
+            document.getElementById("typeResult").innerText = "This is a DFA";
+            checkDFA = true; // Set flag to indicate it's a DFA
+            dfa = {
+                states: automaton.states,
+                alphabet: automaton.alphabet,
+                transitions: automaton.transitions,
+                startState: automaton.startState,
+                acceptStates: automaton.acceptStates
+            };
+        }
+
+        function convertToDFA() {
+            if (checkDFA === true) {
+                document.getElementById("dfaOutput").innerText = "This is already a DFA.";
+                return;
+            }
+            let queue = [];
+            let dfaStates = new Set();
+            let dfaTransitions = {};
+            let dfaAcceptStates = new Set();
+            let stateMap = {};
+
+            function getStateName(set) {
+                return [...set].sort().join('-') || '{}';
+            }
+
+            const startSet = new Set([automaton.startState]);
+            const startName = getStateName(startSet);
+            queue.push(startSet);
+            stateMap[startName] = startSet;
+            dfaStates.add(startName);
+
+            while (queue.length > 0) {
+                const currentSet = queue.shift();
+                const currentName = getStateName(currentSet);
+                dfaTransitions[currentName] = {};
+
+                for (const symbol of automaton.alphabet) {
+                    const nextSet = new Set();
+                    for (const state of currentSet) {
+                        const targets = automaton.transitions[state]?.[symbol] || [];
+                        targets.forEach(t => nextSet.add(t));
+                    }
+
+                    const nextName = getStateName(nextSet);
+                    if (!dfaStates.has(nextName)) {
+                        dfaStates.add(nextName);
+                        queue.push(nextSet);
+                        stateMap[nextName] = nextSet;
+                    }
+
+                    dfaTransitions[currentName][symbol] = nextName;
+                }
+            }
+
+            for (const name of dfaStates) {
+                const stateSet = stateMap[name];
+                for (const s of stateSet) {
+                    if (automaton.acceptStates.includes(s)) {
+                        dfaAcceptStates.add(name);
+                        break;
+                    }
+                }
+            }
+
+            dfa = {
+                states: [...dfaStates],
+                startState: startName,
+                acceptStates: [...dfaAcceptStates],
+                transitions: dfaTransitions
+            };
+
+            document.getElementById("dfaOutput").innerText = JSON.stringify(dfa, null, 2);
+        }
+
+        function minimizeDFA() {
+            if (!dfa) {
+                document.getElementById("minDfaOutput").innerText = "Please convert to DFA first.";
+                return;
+            }
+
+            const { states, startState, acceptStates, transitions } = dfa;
+            let distinguishable = {};
+            let pairs = [];
+
+            // Initialize table with distinguishable pairs
+            for (let i = 0; i < states.length; i++) {
+                for (let j = i + 1; j < states.length; j++) {
+                    const p1 = states[i];
+                    const p2 = states[j];
+                    const key = `${p1},${p2}`;
+                    const isDistinguished = (acceptStates.includes(p1) !== acceptStates.includes(p2));
+                    distinguishable[key] = isDistinguished;
+                    pairs.push([p1, p2]);
+                }
+            }
+
+            // Iteratively mark distinguishable pairs
+            let changed;
+            do {
+                changed = false;
+                for (const [p1, p2] of pairs) {
+                    if (distinguishable[`${p1},${p2}`]) continue;
+
+                    for (const symbol of automaton.alphabet) {
+                        const q1 = transitions[p1]?.[symbol];
+                        const q2 = transitions[p2]?.[symbol];
+
+                        if (!q1 || !q2) continue;
+
+                        const [a, b] = [q1, q2].sort();
+                        const key = `${a},${b}`;
+
+                        if (distinguishable[key]) {
+                            distinguishable[`${p1},${p2}`] = true;
+                            changed = true;
+                            break;
+                        }
+                    }
+                }
+            } while (changed);
+
+            // Group equivalent states
+            let groups = [];
+            let visited = new Set();
+
+            for (const s of states) {
+                if (visited.has(s)) continue;
+                let group = [s];
+                visited.add(s);
+                for (const t of states) {
+                    if (s === t || visited.has(t)) continue;
+                    const [a, b] = [s, t].sort();
+                    if (!distinguishable[`${a},${b}`]) {
+                        group.push(t);
+                        visited.add(t);
+                    }
+                }
+                groups.push(group);
+            }
+
+            let minTransitions = {};
+            let minAcceptStates = [];
+            let minStates = groups.map(g => g.join("-"));
+            let minStartState = '';
+
+            for (const group of groups) {
+                const name = group.join("-");
+                const repr = group[0];
+                if (group.includes(startState)) minStartState = name;
+                if (group.some(s => acceptStates.includes(s))) minAcceptStates.push(name);
+                minTransitions[name] = {};
+                for (const symbol of automaton.alphabet) {
+                    const target = transitions[repr]?.[symbol];
+                    if (target) {
+                        const targetGroup = groups.find(g => g.includes(target));
+                        if (targetGroup) {
+                            minTransitions[name][symbol] = targetGroup.join("-");
+                        }
+                    }
+                }
+            }
+
+            const minimizedDFA = {
+                states: minStates,
+                startState: minStartState,
+                acceptStates: minAcceptStates,
+                transitions: minTransitions
+            };
+
+            document.getElementById("minDfaOutput").innerText = JSON.stringify(minimizedDFA, null, 2);
+        }
+    </script>
+</body>
+
+</html>
