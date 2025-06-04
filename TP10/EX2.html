@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="flex flex-col ml-8 mt-8 gap-8 min-h-screen">
+    <div>
+
+        <div class="countTask">All Task: 0</div>
+        <div class="complete">Complete: 0</div>
+        <div class="remaining">Remaining: 0</div>
+
+        <input type="text" name="" id="" class="inputTask">
+        <button onclick="createNewTask()">New Task</button>
+    </div>
+
+    <div class="allTasks">
+
+    </div>
+    <script>
+        function createNewTask() {
+            let inputTask = $(".inputTask").val();
+            let newTask = $("<div></div>");
+            
+            $(".allTasks").append(newTask);
+            
+            let trashIcon = $("<span></span>");
+            trashIcon.text("🗑");
+
+            let checkBox = $('<input type="checkbox">');
+
+            let task = $("<label></label>");
+
+            task.text(inputTask);
+
+            newTask.append(trashIcon);
+            newTask.append(checkBox);
+            newTask.append(task);
+
+            
+            let coutTask = $(".allTasks").children().length;
+            $(".countTask").text("All Task: " + coutTask);
+
+            checkbox.click(function (){
+                var checkCheckBoxes = $('input:checkbox:checked').length;
+                $(".complete").text("Complete: " + checkCheckBoxes);
+
+
+                var uncheckCheckBoxes = $('input:checkbox:not(:checked)').length;
+                $(".remaining").text("Remaining: " + uncheckCheckBoxes);
+            })
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
