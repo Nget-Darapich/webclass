@@ -3,14 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_test.css">
-    <title>Document</title>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sec1">
-        <p>sgusdjsvdsfhu</p>
-        <p class="main">click</p>
+    <div class="signup-page">
+        <header class="header">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8fa6a5136254edc223cf7d86dd5382a1b86237b0?placeholderIfAbsent=true" alt="Logo" class="header__logo">
+
+            <div class="search-bar">
+                <input type="text" class="search-bar__input">
+                <button class="search-bar__button">Search</button>
+            </div>
+
+            <div class="header__info">
+                <div class="location">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e88fa26bffd80549f270147f0df5d59e71b01f2?placeholderIfAbsent=true" alt="Location" class="location__icon">
+                    <div class="location__text">ខាងក្រោយពេទ្យលោកសង្ឃ​ ផ្លូវ១៤៩ ​​ផ្ទះ​២២៩A សង្កាត់ទឹកល្អក់២​ ភ្នំពេញ</div>
+                </div>
+
+                <div class="contact-cart">
+                    <div class="contact">069896357 / 070313498</div>
+                    <div class="cart">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/79f4c545d21e6b6ec5b551adf0f55d81153389f9?placeholderIfAbsent=true" alt="Cart" class="cart__icon">
+                        <span>My cart</span>
+                    </div>
+                    <div class="account">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d6ae60bb308d7a145e7df58d6fa488137644659?placeholderIfAbsent=true" alt="Account" class="account__icon">
+                        <span>Account</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <nav class="navigation">
+                <a href="#" class="navigation__link">Home</a>
+                <a href="#" class="navigation__link">Laptops</a>
+                <a href="#" class="navigation__link">Desktops</a>
+                <a href="#" class="navigation__link">Components</a>
+                <a href="#" class="navigation__link">Accessories</a>
+                <a href="#" class="navigation__link">Monitors</a>
+            </nav>
+
+            <div class="signup-form">
+                <h1 class="signup-form__title">Sign up</h1>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="username">
+                            Username or email address <span class="required">*</span>
+                        </label>
+                        <input type="text" id="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            Password <span class="required">*</span>
+                        </label>
+                        <input type="password" id="password" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">Sign up</button>
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" class="remember-me__checkbox">
+                            <label for="remember" class="remember-me__label">Remember me</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
