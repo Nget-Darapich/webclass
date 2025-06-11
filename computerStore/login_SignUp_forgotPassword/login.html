@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LoginPage</title>
+</head>
+
+<body class="font-[Exo] text-black bg-white">
+    <!--phone -->
+    <div class="w-[390px] h-[844px] flex flex-col min-w-[390px] min-h-[844px]"><!-- border border-black optional-->
+        <!-- nav phone -->
+        <nav class="w-[390px] h-[74px] flex items-center bg-[#FFD700] text-[10px] font-semibold shadow-lg">
+            <div class="flex">
+                <img src="../picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px]">
+            </div>
+            <div class="flex flex-col w-[310px] h-[64px] gap-[4px] pl-[5px]">
+                <div class="flex">
+                    <img src="../picture/GoogleMaps.png" alt="" class="w-[15px] h-[15px]">
+                    <p class="w-[300px] h-[13px]">ក្រោយពេទ្យលោកសង្ឃ​ ផ្លូវ១៤៩ ​​ផ្ទះ​២២៩A
+                        សង្កាត់ទឹកល្អក់២​ ភ្នំពេញ</p>
+                </div>
+                <div class="flex justify-between ">
+                    <div class="w-[134px] h-[14px] flex items-center">
+                        <img src="../picture/telegram.png" alt="" class="w-[12px] h-[10px]">
+                        <p class="h-[14px] pl-[5px]">069896357 / 070313498</p>
+                    </div>
+                    <div class="flex">
+                        <img src="../picture/ShoppingCart.png" alt="" class="w-[14px] h-[14px]">
+                        <p class="w-[46px] pl-[6px]">My cart</p>
+                    </div>
+                    <div class="flex">
+                        <img src="../picture/Acc.png" alt="" class="w-[14px] h-[14px]">
+                        <p class="w-[62px] pl-[6px]">My Account</p>
+                    </div>
+                </div>
+                <div class="h-[27px] flex">
+                    <div class="w-[238px] border border-black bg-white"></div>
+                    <button class="w-[70px] bg-black text-white">Search</button>
+                </div>
+            </div>
+        </nav>
+        <div class="flex items-center justify-center h-[468px] w-[390px]">
+            <div class="w-[350px] h-[318px] flex flex-col border border-black pl-[20px] pt-[15px] gap-[20px]">
+                <p class="font-semibold underline text-[20px]">Login</p>
+                <div class="flex flex-col gap-[15px]">
+                    <p class="text-[15px]">Username or email address<span class="text-[#D00003]"> *</span></p>
+                    <button class="w-[250px] h-[27px] border border-black"></button>
+                    <p class="text-[15px]">Password<span class="text-[#D00003]"> *</span></p>
+                    <button class="w-[250px] h-[27px] border border-black"></button>
+                </div>
+                <div class="w-[114px] h-[27px] flex justify-between items-center">
+                    <button class="w-[54px] h-[27px] bg-black text-white text-[10px]">Log in</button>
+                    <a href="signUp.html" id="signUp" class="underline text-[10px]">Sign up?</a>
+                </div>
+                <div class="w-[196px] h-[18px] flex items-center justify-between">
+                    <label class="flex items-center text-[10px]">
+                        <input type="checkbox" class="mr-[5px] w-[18px] h-[18px] rounded-[5px] border-[1px]">
+                        Remember me
+                    </label>
+                    <a href="forgotPassword.html" id="forgotPassword" class="underline text-[10px]">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+        <footer
+            class="w-[390px] h-[80px] flex items-center bg-[#FFD700] text-[10px] font-semibold mt-[222px] shadow-lg">
+            <img src="../picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px] pl-[4px]">
+            <div class="flex flex-col w-[310px] h-[62px] gap-[10px] pl-[5px]">
+                <div class="w-[310px] h-[13px] flex">
+                    <img src="../picture/GoogleMaps.png" alt="" class="w-[13px] h-[13px]">
+                    <p class="w-[290px] h-[13px]">ក្រោយពេទ្យលោកសង្ឃ​ ផ្លូវ១៤៩ ​​ផ្ទះ​២២៩A
+                        សង្កាត់ទឹកល្អក់២​ ភ្នំពេញ</p>
+                </div>
+                <div class="w-full h-[13px] flex justify-center items-center">
+                    <img src="../picture/telegram.png" alt="" class="w-[12px] h-[10px]">
+                    <p class="w-[134px] h-[14px] pl-[5px]">069896357 / 070313498</p>
+                </div>
+                <div class="w-full h-[13px] flex justify-center items-center">
+                    <img src="../picture/copyright.png" alt="" class="w-[13px] h-[13px]">
+                    <p class="w-[164px] h-[14px] pl-[5px]">X-Computer. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
