@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework_jquerry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="flex flex-col items-center gap-20">
+            <p class="text-[48px] font-bold">Nget Darapich</p>
+            <p id="main_message" class="text-[48px] font-semibold">Welcome to my webpage!</p>
+            <div class="flex gap-4">
+                <button id="changeBtn" class="bg-blue-400 w-[200px] h-[50px] rounded-[10px] text-[20px] font-semibold">Change Message</button>
+                <button id="surpriseBtn" class="bg-blue-400 w-[200px] h-[50px] rounded-[10px] text-[20px] font-semibold">Show Surprise</button>
+                <button id="toggleBtn" class="bg-blue-400 w-[200px] h-[50px] rounded-[10px] text-[20px] font-semibold">Toggle Mode</button>
+            </div>
+            <div id="suprise_message"></div>
+        </div>
+    </div>
+    <script>
+        $('#changeBtn').click(function(){
+            $('#main_message').text("You've just changed the message!");
+        })
+        $('#surpriseBtn').click(function(){
+            $('#suprise_message').text("🎉 Surprise! You're doing great!").css({
+                'font-size': '24px',
+                'font-weight': 'bold'
+            });
+        })
+        $('#toggleBtn').click(function(){
+            $('body').toggleClass('bg-gray-900 text-white');
+        })
+    </script>
+
+</body>
+
+</html>

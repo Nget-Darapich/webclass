@@ -6,11 +6,52 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="javascript.js"></script>
     <title>XComputerStore</title>
 </head>
-<body>
 
-    
+<body class="font-[Exo] text-black bg-white">
+    <!--phone -->
+    <div class="md:hidden max-w-screen h-[2218px] flex flex-col"><!-- border border-black optional-->
+        <nav class="h-[74px] flex items-center justify-center bg-[#FFD700] text-[10px] font-semibold shadow-lg">
+            <div class="w-[373px] h-[51px] flex">
+                <img src="picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px]">
+                <div class="flex flex-col w-[294px] h-[51px] ml-[5px]">
+                    <div class="h-[27px] flex">
+                        <input type="text"
+                            class="w-[240px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                        <button class="w-[54px] bg-black text-white">Search</button>
+                    </div>
+                    <div class="h-[15px] flex justify-between mt-[9px]">
+                        <div class="w-[134px] h-[14px] flex items-center">
+                            <img src="picture/telegram.png" alt="" class="w-[12px] h-[10px]">
+                            <p class="h-[14px] pl-[5px]">069896357 / 070313498</p>
+                        </div>
+                        <div class="flex">
+                            <img src="picture/ShoppingCart.png" alt="" class="w-[14px] h-[14px]">
+                            <p class="w-[46px] pl-[6px]">My cart</p>
+                        </div>
+                        <div class="flex">
+                            <img src="picture/Acc.png" alt="" class="w-[14px] h-[14px]">
+                            <p class="w-[62px] pl-[6px]">My Account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="h-[25px] flex items-center justify-center text-[11px] font-semibold">
+            <div class="h-[11px] flex gap-[15px]">
+                <button class="">Home</button>
+                <button class="">Laptops</button>
+                <button class="">Desktops</button>
+                <button class="">Components</button>
+                <button class="">Accessories</button>
+                <button class="">Monitors</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

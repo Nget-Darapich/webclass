@@ -12,24 +12,31 @@
 
 <body class="bg-pink-100 flex items-center justify-center min-h-screen">
     <div
-        class="flex flex-col gap-[20px] bg-white w-[600px] h-[400px] rounded-2xl shadow-xl p-4 flex items-center justify-center">
+        class="h-[330px] flex flex-col gap-[30px] bg-white w-[600px] h-[400px] rounded-2xl shadow-xl p-4 flex items-center pt-[70px]">
         <p class="text-3xl">True Or False?</p>
         <p class="text-2xl">The capital of Cambodia is Phnom Penh.</p>
-        <div class="flex gap-4">
-            <button class="trueBtn w-[180px] h-[60px] bg-[#1ECA21]">True</button>
-            <button class="falseBtn w-[180px] h-[60px] bg-[#F50808]">False</button>
+        <div class="flex gap-4 text-white text-[16px] font-semibold">
+            <button class="trueBtn w-[180px] h-[60px] bg-[#1ECA21] rounded-[5px]">True</button>
+            <button class="falseBtn w-[180px] h-[60px] bg-[#F50808] rounded-[5px]">False</button>
         </div>
         <div class="result"></div>
 
         <script>
             $(".trueBtn").click(function () {
-                $(".result").text("✅Correct!")
-                $(".result").css("color", "green");
+            $(".result").text("✅Correct!")
+            $(".result").css({
+                "color": "green",
+                "font-size": "24px"
+            });
             })
             $(".falseBtn").click(function () {
-                $(".result").text("❌Wrong!")
-                $(".result").css("color", "red");
+            $(".result").text("❌Wrong!")
+            $(".result").css({
+                "color": "red",
+                "font-size": "24px"
+            });
             })
+        </script>
         </script>
     </div>
 </body>
