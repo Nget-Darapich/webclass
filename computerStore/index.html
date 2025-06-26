@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,42 +14,1852 @@
 </head>
 
 <body class="font-[Exo] text-black bg-white">
-    <!--phone -->
-    <div class="md:hidden max-w-screen h-[2218px] flex flex-col"><!-- border border-black optional-->
-        <nav class="h-[74px] flex items-center justify-center bg-[#FFD700] text-[10px] font-semibold shadow-lg">
-            <div class="w-[373px] h-[51px] flex">
+    <div class="md:h-[5295px] max-w-screen h-[2370px] flex flex-col">
+        <!--phone header-->
+        <nav class="md:hidden h-[124px] flex justify-center bg-[#FFD700] text-[10px] font-semibold shadow-lg pt-[60px]">
+            <div class="w-[373px] h-[51px] flex mb-[13px]">
                 <img src="picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px]">
-                <div class="flex flex-col w-[294px] h-[51px] ml-[5px]">
-                    <div class="h-[27px] flex">
-                        <input type="text"
-                            class="w-[240px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
-                        <button class="w-[54px] bg-black text-white">Search</button>
-                    </div>
-                    <div class="h-[15px] flex justify-between mt-[9px]">
+                <div class="flex flex-col w-[294px] h-[51px]">
+                    <div class="h-[15px] flex justify-between mb-[9px]">
                         <div class="w-[134px] h-[14px] flex items-center">
                             <img src="picture/telegram.png" alt="" class="w-[12px] h-[10px]">
                             <p class="h-[14px] pl-[5px]">069896357 / 070313498</p>
                         </div>
                         <div class="flex">
-                            <img src="picture/ShoppingCart.png" alt="" class="w-[14px] h-[14px]">
-                            <p class="w-[46px] pl-[6px]">My cart</p>
+                            <img src="picture/addToCard.png" alt="" class="w-[14px] h-[14px]">
+                            <p class="w-[46px] pl-[3px]">My cart</p>
                         </div>
                         <div class="flex">
                             <img src="picture/Acc.png" alt="" class="w-[14px] h-[14px]">
-                            <p class="w-[62px] pl-[6px]">My Account</p>
+                            <p class="w-[62px] pl-[3px]">My Account</p>
+                        </div>
+                    </div>
+                    <div class="h-[27px] flex">
+                        <input type="text"
+                            class="w-[240px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                        <button class="w-[54px] bg-black text-white">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--pc header-->
+        <nav
+            class="hidden md:block md:h-[112px] md:bg-[#FFD700] md:flex md:justify-center md:text-[20px] md:font-semibold">
+            <div class="w-[1098px] flex items-center gap-[20px]">
+                <img src="picture/XComputerStoreLogo.png" alt="" class="w-[117px] h-[80px]">
+                <div class="h-[54px] flex">
+                    <input type="text"
+                        class="w-[412px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                    <button class="w-[89px] bg-black text-white">Search</button>
+                </div>
+                <div class="w-[440px] h-[70px] flex flex-col justify-between">
+                    <div class="h-[30px] flex justify-between items-center">
+                        <div class="w-[302px] flex justify-between">
+                            <img src="picture/Email.png" alt="" class="w-[30px] h-[30px]">
+                            <p>Ngetdarapich23@gamil.com</p>
+                        </div>
+                        <div class="w-[113px] flex justify-between">
+                            <img src="picture/Acc.png" alt="" class="w-[30px] h-[30px]">
+                            <p>Account</p>
+                        </div>
+                    </div>
+                    <div class="h-[30px] flex justify-between items-center">
+                        <div class="w-[302px] flex">
+                            <img src="picture/Phone.png" alt="" class="w-[30px] h-[30px]">
+                            <p class="flex pl-[10px]">069896357 / 070313498</p>
+                        </div>
+                        <div class="w-[113px] flex justify-between">
+                            <img src="picture/addToCard.png" alt="" class="w-[30px] h-[30px]">
+                            <p>My cart</p>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <div class="h-[25px] flex items-center justify-center text-[11px] font-semibold">
-            <div class="h-[11px] flex gap-[15px]">
-                <button class="">Home</button>
-                <button class="">Laptops</button>
-                <button class="">Desktops</button>
-                <button class="">Components</button>
-                <button class="">Accessories</button>
-                <button class="">Monitors</button>
+        <!-- phone nav -->
+        <div class="md:hidden h-[35px] flex flex-col justify-center pl-[20px]">
+            <div class="relative w-[124px]">
+                <button
+                    class="w-[89px] h-[30px] border border-black shadow-lg text-[15px] underline font-semibold flex items-center justify-center bg-white mt-[5px]"
+                    id="menuButton">
+                    Home
+                </button>
+                <div id="dropdownMenu"
+                    class="absolute top-0 left-[-18px] mt-0 w-[125px] h-[200px] bg-white border border-black shadow-lg z-10 flex flex-col gap-[11px] pb-[6px] pt-[3px] mt-[5px] justify-center items-center text-[15px] font-semibold opacity-0 pointer-events-none transition-opacity duration-200"
+                    style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
+                    <a href="#" class="font-semibold underline">Home</a>
+                    <div class="relative">
+                        <a href="#" class="underline cursor-pointer" id="laptopsBtn">Laptops</a>
+                        <div class="absolute top-[-17px] left-[90px] w-[180px] bg-white border border-black shadow-lg z-20 flex flex-col items-center gap-[11px] p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                            style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15); min-height: 220px;" id="laptopsDropdown">
+                            <a href="#" class="font-semibold underline">MSI</a>
+                            <a href="#" class="font-semibold underline">ROG</a>
+                            <a href="#" class="font-semibold underline">ASUS</a>
+                            <a href="#" class="font-semibold underline">Lenovo</a>
+                            <a href="#" class="font-semibold underline">MacBook</a>
+                        </div>
+                        <script>
+                            $(function () {
+                                $('#laptopsBtn').on('click', function (e) {
+                                    e.stopPropagation();
+                                    $('#laptopsDropdown').removeClass('opacity-0 pointer-events-none');
+                                });
+                                $('#laptopsDropdown').on('mouseleave', function () {
+                                    $('#laptopsDropdown').addClass('opacity-0 pointer-events-none');
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <div class="relative">
+                        <a href="#" class="underline cursor-pointer" id="monitorsBtn">Monitors</a>
+                        <div class="absolute top-[-17px] left-[94px] w-[180px] bg-white border border-black shadow-lg z-20 flex flex-col items-center gap-[11px] p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                            style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15); min-height: 120px;" id="monitorsDropdown">
+                            <a href="#" class="font-semibold underline">MSI</a>
+                            <a href="#" class="font-semibold underline">ROG</a>
+                            <a href="#" class="font-semibold underline">ASUS</a>
+                        </div>
+                        <script>
+                            $(function () {
+                                $('#monitorsBtn').on('click', function (e) {
+                                    e.stopPropagation();
+                                    $('#monitorsDropdown').toggleClass('opacity-0 pointer-events-none');
+                                });
+                                $('#monitorsDropdown').on('mouseleave', function () {
+                                    $('#monitorsDropdown').addClass('opacity-0 pointer-events-none');
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <div class="relative">
+                        <a href="#" class="underline cursor-pointer" id="desktopsBtn">Desktops</a>
+                        <div class="absolute top-[-17px] left-[95px] w-[180px] bg-white border border-black shadow-lg z-20 flex flex-col items-center gap-[11px] p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                            style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15); min-height: 120px;" id="desktopsDropdown">
+                            <a href="#" class="font-semibold underline">ROG</a>
+                            <a href="#" class="font-semibold underline">MSI</a>
+                            <a href="#" class="font-semibold underline">ASUS</a>
+                        </div>
+                        <script>
+                            $(function () {
+                                $('#desktopsBtn').on('click', function (e) {
+                                    e.stopPropagation();
+                                    $('#desktopsDropdown').toggleClass('opacity-0 pointer-events-none');
+                                });
+                                $('#desktopsDropdown').on('mouseleave', function () {
+                                    $('#desktopsDropdown').addClass('opacity-0 pointer-events-none');
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="relative">
+                        <a href="#" class="underline cursor-pointer" id="accessoriesBtn">Accessories</a>
+                        <div class="absolute top-[-17px] left-[104px] w-[180px] bg-white border border-black shadow-lg z-20 flex flex-col items-center gap-[11px] p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                            style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15); min-height: 120px;"
+                            id="accessoriesDropdown">
+                            <a href="#" class="font-semibold underline">Mouse</a>
+                            <a href="#" class="font-semibold underline">Headset</a>
+                            <a href="#" class="font-semibold underline">Keyboard</a>
+                        </div>
+                        <script>
+                            $(function () {
+                                $('#accessoriesBtn').on('click', function (e) {
+                                    e.stopPropagation();
+                                    $('#accessoriesDropdown').toggleClass('opacity-0 pointer-events-none');
+                                });
+                                $('#accessoriesDropdown').on('mouseleave', function () {
+                                    $('#accessoriesDropdown').addClass('opacity-0 pointer-events-none');
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="relative">
+                        <a href="#" class="underline cursor-pointer" id="componentsBtn">Components</a>
+                        <div class="absolute top-[-17px] left-[106px] w-[200px] bg-white border border-black shadow-lg z-20 flex flex-col items-center gap-[11px] p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                            style="box-shadow: 4px 4px 8px rgba(0,0,0,0.15); min-height: 220px;"
+                            id="componentsDropdown">
+                            <a href="#" class="font-semibold underline">CPU</a>
+                            <a href="#" class="font-semibold underline">GPU</a>
+                            <a href="#" class="font-semibold underline">HDD</a>
+                            <a href="#" class="font-semibold underline">SSD</a>
+                            <a href="#" class="font-semibold underline">RAM</a>
+                            <a href="#" class="font-semibold underline">CASE</a>
+                            <a href="#" class="font-semibold underline">Mother Board</a>
+                            <a href="#" class="font-semibold underline">POWERSUPPLY</a>
+                        </div>
+                        <script>
+                            $(function () {
+                                $('#componentsBtn').on('click', function (e) {
+                                    e.stopPropagation();
+                                    $('#componentsDropdown').toggleClass('opacity-0 pointer-events-none');
+                                });
+                                $('#componentsDropdown').on('mouseleave', function () {
+                                    $('#componentsDropdown').addClass('opacity-0 pointer-events-none');
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $('#menuButton').on('click', function (e) {
+                            e.stopPropagation();
+                            $('#dropdownMenu').toggleClass('opacity-0 pointer-events-none');
+                        });
+                        $('#dropdownMenu').on('mouseleave', function () {
+                            $('#dropdownMenu').addClass('opacity-0 pointer-events-none');
+                        });
+
+                    });
+                </script>
+            </div>
+        </div>
+        <!-- pc nav -->
+        <div
+            class="hidden md:block md:flex md:gap-[30px] md:items-center md:justify-center md:pr-[520px] md:h-[58px] md:text-[20px] md:font-semibold md:underline md:text-black">
+            <p>Home</p>
+            <p>Laptops</p>
+            <p>Desktops</p>
+            <p>Components</p>
+            <p>Accessories</p>
+            <p>Monotors</p>
+
+        </div>
+        <div class="flex justify-center w-full py-2 md:py-0">
+            <div class="md:w-[1200px] md:h-[211px] md:flex md:justify-between w-[368px] h-[90px] flex gap-[8px]">
+                <img src="picture/cover1.png" alt="" class="md:hidden w-[180px] h-[90px] rounded-[10px]">
+                <img src="picture/cover2.png" alt="" class="md:hidden w-[180px] h-[90px] rounded-[10px]">
+                <img src="picture/cover1.png" alt=""
+                    class="hidden md:block md:w-[593px] md:h-[211px] md:rounded-[25px]">
+                <img src="picture/cover2.png" alt=""
+                    class="hidden md:block md:w-[593px] md:h-[211px] md:rounded-[25px]">
+            </div>
+        </div>
+        <!-- Promotion sec -->
+        <div
+            class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col items-center pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center text-[15px] h-[20px] leading-[15px] font-semibold">
+                Hot Promotions</p>
+            <div class="md:hidden flex justify-center pt-[5px]">
+                <hr class="w-[119px] bg-[#D9D9D9] h-[2px] border-0 rounded-l">
+                <hr class="w-[112px] bg-[#E10600] h-[2px] border-0">
+                <hr class="w-[119px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[482px] bg-[#D9D9D9] h-[2px] border-0 rounded-l">
+                <hr class="w-[236px] bg-[#E10600] h-[2px] border-0">
+                <hr class="w-[482px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div
+            class="md:font-[Exo] md:h-[356px] md:flex md:flex-col md:items-center md:text-[16px] h-[199px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1200px] md:h-[280px] md:flex md:gap-[25px] md:mt-[25px] md:mb-[20px] w-[350px] h-[180px] flex gap-[10px] my-[10px]">
+                <div
+                    class="md:w-[220px] md:h-[280px] md:flex md:flex-col md:p-[10px] w-[110px] h-[160px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_strix_scar_16_g635lw.png" alt="ROG STRIX SCAR 16 G635LW"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        ROG STRIX SCAR 16 G635LW 2025
+                    </div>
+                    <div class="md:text-[16px] md:pt-0 text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$3099</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[280px] md:flex md:flex-col md:p-[10px] w-[110px] h-[160px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_strix_scar_16_g635lw.png" alt="ROG STRIX SCAR 16 G835LW"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        ROG STRIX SCAR 16 G835LW 2025
+                    </div>
+                    <div class="md:text-[16px] md:pt-0 text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$3199</span>
+                        <span class="text-red-600 line-through">$3399</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[280px] md:flex md:flex-col md:p-[10px] w-[110px] h-[160px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_zephyrus_g14.png" alt="ROG ZEPHYRUS G14"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        ROG ZEPHYRUS G14 GA403WR 2025
+                    </div>
+                    <div class="md:text-[16px] md:pt-0 text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$3199</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[220px] md:h-[280px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_zephyrus_g14.png" alt="ROG ZEPHYRUS G14"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        ROG ZEPHYRUS G14 GA403WR 2025
+                    </div>
+                    <div class="md:text-[16px] font-bold text-[11px] flex items-center gap-2">
+                        <span>$3199</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[220px] md:h-[280px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/tuf_black.png" alt="ROG ZEPHYRUS G14"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        TUF FX507ZC4-HN108W
+                    </div>
+                    <div class="md:text-[16px] font-bold text-[11px] flex items-center gap-2">
+                        <span>$3199</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[285px]">Show
+                More</button>
+        </div>
+        <!-- laptops sec -->
+        <div class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center md:pr-[1090px] text-[15px] h-[20px] font-semibold text-center pr-[295px]">
+                Laptops</p>
+            <div class="md:hidden flex justify-center items-center pt-[3px] ">
+                <hr class="w-[57px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[293px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[119px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[1090px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div class="md:h-[590px] md:text-[16px] h-[432px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1210px] md:h-[570px] md:mt-[20px] md:mb-0 md:gap-[20px] w-[358px] h-[401px] flex gap-[8px] my-[12px]">
+                <div
+                    class="md:w-[226px] md:h-[570px] md:p-[10px] w-[114px] h-[391px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/lenovo_thinkpad_e16.png" alt="Lenovo ThinkPad E16 Gen 1"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Lenovo ThinkPad E16 Gen 1
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: intel Core i7-1355U</li>
+                        <li>Ram: 16GB</li>
+                        <li>Storage: 1TB SSD M.2</li>
+                        <li>Graphics: Intel Iris Xe Graphics</li>
+                        <li>Display: 16"inch FHD</li>
+                        <li>OS: Win11 Pro</li>
+                        <li>Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$899</span>
+                        <span class="text-red-600 line-through">$899</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[570px] md:p-[10px] w-[114px] h-[391px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/titan_18.png" alt="Titan 18 HX AI A2XWJG"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Titan 18 HX AI A2XWJG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU : Intel® Core™ ULTRA 9 275HX</li>
+                        <li>Ram: 96GB DDR5 6400MH Original </li>
+                        <li>Screen :18" 16:10 UHD + Refresh Rate 120Hz</li>
+                        <li>VGA : NVIDIA RTX 5090-24GB GDDR7</li>
+                        <li>Cherry mechanical per-key RGB OS win 11 License</li>
+                        <li>Laptop is Original Box Company + 2 Years Warranty</li>
+                        <li class="">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="md:block hidden list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$3099</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[570px] md:p-[10px] w-[114px] h-[391px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/raider_a18.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Raider A18 HX A9WJG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: AMD RYZEN 9 9955HX3</li>
+                        <li>RAM: 64GB 32*2 DDR5 Original</li>
+                        <li>SDD: NVME PCIE 2TB GEN4 Original</li>
+                        <li>Screen: 18" 16:10 UHD + Refresh Rate 120Hz + per-key RGB Gaming Keyboard</li>
+                        <li>VGA: NVIDIA RTX 5090-GDDR7 24GB</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li>Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="hidden md:block list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$4299</span>
+                        <span class="text-red-600 line-through">$5299</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[226px] md:h-[570px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/raider_a18.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Raider A18 HX AI A2XWIG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: Intel® Core™ ULTRA 9 275HX</li>
+                        <li>RAM: 32GB 16*2 DDR5 Original</li>
+                        <li>M.2: PCIE 2TB Gen5 + 2TB Gen4</li>
+                        <li>Screen: 18" 16:10 UHD+
+                            Refresh Rate 120Hz +per-key RGB Gaming Keyboard</li>
+                        <li>VGA: NVIDIA RTX 5080-GDDR7 16GB</li>
+                        <li>OS: win 11 License</li>
+                        <li>Laptop is Original Box Company +2Years Warranty</li>
+                        <li>Free: ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="md:text-[16px] flex items-center gap-2 font-bold">
+                        <span class="">$3699</span>
+                        <span class="text-red-600 line-through">$4499</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[226px] md:h-[570px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[8px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/vector_A18_HXA9WIG.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Raider A18 HX A9WJG 2025
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: AMD RYZEN 9 9955HX3</li>
+                        <li>RAM: 32GB 16*2 DDR5 Original</li>
+                        <li>SDD: NVME PCIE 1TB GEN4 Original</li>
+                        <li>Screen: 18" 16:10 UHD +Refresh Rate 240Hz +26-zone RGB Gaming Keyboard</li>
+                        <li>VGA: NVIDIA RTX 5080-GDDR7 16GB</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li>Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="md:text-[16px] flex items-center gap-2 font-bold">
+                        <span class="">$3099</span>
+                        <span class="text-red-600 line-through">$3299</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:hidden bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[290px]">Show
+                More</button>
+        </div>
+        <div class="hidden md:block md:h-[667px] md:text-[16px] md:flex md:flex-col md:items-center">
+            <div class="md:w-[1210px] md:h-[600px] md:mt-[20px] md:mb-[15px] md:gap-[20px] md:flex">
+                <div
+                    class="md:w-[226px] md:h-[600px] md:w-[114px] md:h-[391px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/vector_A18_HXA9WIG.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Vector 16 HX AI A2XWIG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: Intel® Core™ ULTRA 9 275HX</li>
+                        <li>RAM: 16GB 8*2 DDR5 Original</li>
+                        <li>SDD: NVME PCIE 1TB GEN4 Original</li>
+                        <li>Screen: 18" 16:10 UHD + Refresh Rate 240Hz +26-zone RGB Gaming Keyboard</li>
+                        <li>VGA : NVIDIA RTX 5080-GDDR7 16GB</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li class="hidden md:block">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 font-bold">
+                        <span class="">$2799</span>
+                        <span class="text-red-600 line-through">$3199</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[600px] md:w-[114px] md:h-[391px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/vector_A18_HXA9WIG.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Vector A18 HX A9WHG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: AMD RYZEN 9 9955HX3</li>
+                        <li>RAM: 16GB 8*2 DDR5 Original</li>
+                        <li>SDD: NVME PCIE 1TB GEN4 Original</li>
+                        <li>Screen: 18" 16:10 UHD + Refresh Rate 240Hz +26-zone RGB Gaming Keyboard</li>
+                        <li>VGA: NVIDIA RTX 5070-GDDR7 12GB</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li class="hidden md:block">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 font-bold">
+                        <span class="">$2349</span>
+                        <span class="text-red-600 line-through">$2899</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[600px] md:w-[114px] md:h-[391px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/vector_A18_HXA9WIG.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Vector 16 HX AI A2WXHG
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: Intel® Core™ ULTRA 7 255HX</li>
+                        <li>RAM: 16GB DDR5 Original</li>
+                        <li>SDD: NVME PCIE 512GB Gen4 Original</li>
+                        <li>Screen: 16" 16:10 QHD + Refresh Rate 240Hz +24-zone RGB Gaming Keyboard</li>
+                        <li>VGA: NVIDIA RTX 5070-GDDR7 12GB</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li class="hidden md:block">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 font-bold">
+                        <span class="">$1999</span>
+                        <span class="text-red-600 line-through">$2399</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[600px] md:w-[114px] md:h-[391px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/msi_crosshair_16.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        MSI CROSSHAIR 16 HXD 2025
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: Intel® Core™ i9-14900HX Processor</li>
+                        <li>RAM: 32GB DDR5 Original</li>
+                        <li>SDD: NVME PCIE 1TB GEN4 Original</li>
+                        <li>Screen: 16" 2K + Refresh Rate 240Hz +RGB 24-zone backlit keyboard</li>
+                        <li>VGA: NVIDIA RTX 4060-8GB GDDR6</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li class="hidden md:block">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 font-bold">
+                        <span class="">$1599</span>
+                        <span class="text-red-600 line-through">$1699</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[600px] md:w-[114px] md:h-[391px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/msi_crosshair_16.png" alt="Raider A18 HX A9WJG 2025"
+                        class="md:w-[160px] md:h-[128px] md:pt-[10px] w-[75px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        MSI CROSSHAIR 16 HXD 2025 Core I7
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[14px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[10px] pb-[10px] pt-[5px]">
+                        <li>CPU: Intel® Core™ i7-14650HX Processor</li>
+                        <li>RAM: 16GB DDR5 Original</li>
+                        <li>SDD: PCIE 1TB GEN4 Original</li>
+                        <li>Screen: 16 " 2K + Refresh Rate 240Hz +
+                            RGB 24-zone backlit keyboard</li>
+                        <li>VGA: NVIDIA RTX 4060-8GB GDDR6</li>
+                        <li>Laptop is Original Box Company + 2Years Warranty</li>
+                        <li>OS: win 11 License</li>
+                        <li class="hidden md:block">Free : ឥតគិតថ្លៃ 8 មុខ
+                            <ul class="list-none">
+                                <li>-BackPack</li>
+                                <li>-Mouse Gaming</li>
+                                <li>-GAMING Headset</li>
+                                <li>-Flash 64GB</li>
+                                <li>-Cooling Fan</li>
+                                <li>-Cleaning kit</li>
+                                <li>-Mousepad</li>
+                                <li>-Screen protection</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 font-bold">
+                        <span class="">$1449</span>
+                        <span class="text-red-600 line-through">$1499</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                class="hidden md:block md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold md:bg-[#D00003] md:border md:border-[#A8191B] md:text-white md:rounded-[3px]">Show
+                More</button>
+        </div>
+        <!-- Desktops sec -->
+        <div class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center md:pr-[1070px] text-[15px] h-[20px] font-semibold text-center pr-[287px]">
+                Desktops</p>
+            <div class="md:hidden flex justify-center items-center pt-[3px] ">
+                <hr class="w-[65px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[285px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[138px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[1071px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div class="md:h-[582px] md:text-[16px] h-[560px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1210px] md:h-[562px] md:mt-[20px] md:mb-0 md:gap-[20px] w-[358px] h-[516px] flex gap-[8px] my-[12px]">
+                <div
+                    class="md:w-[226px] md:h-[562px] md:p-[10px] w-[114px] h-[516px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop1.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] w-[81px] h-[65px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[16px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[11px] pb-[10px] pt-[5px]">
+                        <li>CPU: IntelCore Ultra 7 265K ( 20 Cores / Up to 5.5GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus TUF B860-PLUS WIFI</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M.2 Crucial P310 1TB (Read 7100MB/s) 3 Years warranty</li>
+                        <li>Graphic Card: ZOTAC GAMING RTX 5060 Ti 8GB TwinEdge OC</li>
+                        <li>Power Supply: Adark Flash PMT750 Black (ATX 3.1 / 750W / 80 Plus Gold / Full Modular)</li>
+                        <li>Case: Darkflash DRX90 Glass Black +3 fans</li>
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span>$1409</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[562px] md:p-[10px] w-[114px] h-[516px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop2.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] w-[81px] h-[65px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[16px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[11px] pb-[10px] pt-[5px]">
+                        <li>CPU: IntelCore Ultra 7 265K ( 20 Cores / Up to 5.5GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus TUF B860-PLUS WIFI</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 1TB PCIe 4.0 ( Read Speed 7000MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5070 Solid 12GB 3 Years Warranty</li>
+                        <li>Power Supply: dark Flash PMT750 Black ( ATX 3.1 / 750W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Acegeek L460 Black Computer Case + 3 Fans</li>
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$1735</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[562px] md:p-[10px] w-[114px] h-[516px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[8px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop3.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] w-[81px] h-[65px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[16px] md:pl-[15px] list-disc pl-[9px] text-[10px] leading-[11px] pb-[10px] pt-[5px]">
+                        <li>CPU: IntelCore Ultra 7 265K ( 20 Cores / Up to 5.5GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 Pro1TB PCIe 4.0 ( Read Speed 7400MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5070Ti SFF 16GB 3 Years Warranty</li>
+                        <li>Power Supply: dark Flash PMT850 Black ( ATX 3.1 / 850W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Asus SI-A02 Black + 4 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$1979</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[562px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop3.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] w-[81px] h-[65px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 7 265K ( 20 Cores / Up to 5.5GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: Liquid DeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 900 Pro 1TB PCIe 4.0 ( Read Speed 7400MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5080 Solid Core 16GB GDDR7 3 Years Warranty</li>
+                        <li>Power Supply: Deepcool PQ1000P ( 1000W / 80 Plus Platinum / ATX3.1 / Full Modular )</li>
+                        <li>Case: Asus A02 Black+ 4 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$2,375</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[562px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop5.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] w-[81px] h-[65px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 9 285K ( 27 Cores / Up to 5.7GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: Liquid Jungle Astrabeat DGT 360mm Black</li>
+                        <li>SSD: M2 Adata Legend 900 1TB PCIe 4.0 ( Read Speed 7000MB/s )</li>
+                        <li>Graphic Card: Asus Dual RTX3060 12GB</li>
+                        <li>Power Supply: Adark Flash PMT750 Black ( ATX 3.1 / 750W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Acegeek L460 Black Computer Case + 3 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$1,510</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:hidden bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[290px]">
+                Show More</button>
+        </div>
+
+        <div class="hidden md:block md:h-[654px] md:text-[16px] md:flex md:flex-col md:items-center">
+            <div
+                class="md:w-[1210px] md:h-[582px] md:my-[20px] md:gap-[20px] w-[358px] h-[516px] flex gap-[8px] my-[12px]">
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[582px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop6.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 9 285K ( 24 Cores / Up to 5.7GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M.2 Crucial P310 1TB (Read 7100MB/s) 3 Years warranty</li>
+                        <li>Graphic Card: ZOTAC RTX 5060Ti 8GB Twin Edge black 3 Years Warranty</li>
+                        <li>Power Supply: dark Flash PMT750 Black ( ATX 3.1 / 750W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Darkflash DRX90 Glass Black ( Included ARGB Fan 4pcs )</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$1,675</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[582px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop7.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 9 285K ( 24 Cores / Up to 5.7GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 Pro 1TB PCIe 4.0 ( Read Speed 7400MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5070 Solid 12GB 3 Years Warranty</li>
+                        <li>Power Supply: dark Flash PMT750 Black ( ATX 3.1 / 750W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Acegeek L460 Black Computer Case + 3 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$1,910</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[582px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop8.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 9 285K ( 24 Cores / Up to 5.7GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 1TB PCIe 4.0 ( Read Speed 7000MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5070Ti Solid SFF 16GB 3 Years Warranty</li>
+                        <li>Power Supply: dark Flash PMT850 Black ( ATX 3.1 / 850W / 80 Plus Gold / Full Modular )</li>
+                        <li>Case: Asus SI-A02 Black + 4 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$2,135</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[582px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop9.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core Ultra 9 285K ( 24 Cores / Up to 5.7GHz )</li>
+                        <li>Ram: G-Skill Trident Z5 32GB DDR5 6000MT/s</li>
+                        <li>MB: Asus Strix B860-F WIFI 7</li>
+                        <li>CPU Cooler: LiquidDeepCool LE360-V2 Black</li>
+                        <li>SSD: M2 Adata Legend 900 Pro 1TB PCIe 4.0 ( Read Speed 7400MB/s )</li>
+                        <li>Graphic Card: ZOTAC RTX 5080 Solid Core 16GB GDDR7 3 Years Warranty</li>
+                        <li>Power Supply: Deepcool PQ1000P ( 1000W / 80 Plus Platinum / ATX3.1 / Full Modular )</li>
+                        <li>Case: Darkflash DY470 Black + 4 Fans</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$2,589</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block md:w-[226px] md:h-[582px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/desktop10.png" alt="Desktop Gaming / Design"
+                        class="md:w-[160px] md:h-[128px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[13px] font-semibold leading-[12px]">
+                        Desktop Gaming / Design
+                    </div>
+                    <ul class="md:text-[13px] md:leading-[16px] md:pl-[15px] md:list-disc md:pb-[10px] md:pt-[5px]">
+                        <li>CPU: Intel Core i5 12400F ( 6 Cores / 12 Threads / up to 4.40GHz)</li>
+                        <li>Ram: DDR4 16GB SSCT 3200MHz Warranty 3 Years</li>
+                        <li>MB: H610M WiFi Colorful</li>
+                        <li>M.2 OCEANIC Whitetip E130 512GB Gen3 ( Speed 3200MB/s )</li>
+                        <li>Graphic Card: Zotac RTX3050 6GB VERTO Dual Fan</li>
+                        <li>Power Supply: Acegeek 400W</li>
+                        <li>Case: Acegeek Stellar Black Computer Case (With 4 Rainbow Fan)</li>
+
+                    </ul>
+                    <div class="md:text-[16px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$459</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px]  w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[285px]">Show
+                More</button>
+        </div>
+        <!-- Component sec -->
+        <div class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center md:pr-[1021px] text-[15px] h-[20px] font-semibold text-center pr-[262px]">
+                Components</p>
+            <div class="md:hidden flex justify-center items-center pt-[3px] ">
+                <hr class="w-[89px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[261px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[188px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[1021px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div class="md:h-[375px] md:text-[16px] h-[212px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1200px] md:h-[290px] md:my-[25px] md:gap-[25px] w-[350px] h-[193px] flex gap-[10px] my-[10px]">
+                <div
+                    class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/i7_265k.png" alt="i7_265k"
+                        class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        Intel Core Ultra 7 265K ( 20cores / Up to 5.5 GHz)
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$345</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/i7_265kff.png" alt="i7_265kff"
+                        class="md:w-[157px] md:h-[126px] md:pt-[10x] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:text-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        Intel Core Ultra 7 265KF ( 20cores / Up to 5.5 GHz)
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$335</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                        class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        HDD Laptop WD Blue 1TB(2.5"/ Cache 128MB /5400rpm)
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$49</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                        class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        HDD Laptop WD Blue 1TB( 2.5"/ Cache 128MB /5400rpm )
+                    </div>
+                    <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$49</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                        <button
+                            class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                        class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        HDD Laptop WD Blue 1TB ( 2.5"/ Cache 128MB /5400rpm )
+                    </div>
+                    <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span>$49</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                        <button
+                            class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[285px]">Show
+                More</button>
+        </div>
+
+        <!-- Accessories sec -->
+        <div class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center md:pr-[1034px] text-[15px] h-[20px] font-semibold text-center pr-[266px]">
+                Accessories</p>
+            <div class="md:hidden flex justify-center items-center pt-[3px] ">
+                <hr class="w-[84px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[266px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[176px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[1033px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div class="md:h-[375px] md:text-[16px] h-[212px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1200px] md:h-[365px] md:my-[25px] md:gap-[25px] w-[350px] h-[193px] flex gap-[10px] my-[10px]">
+                <div
+                    class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_p306_tuf.png" alt="Asus P306 TUF GAMING M4"
+                        class="md:w-[157px] md:h-[126px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:my-[10px] font-semibold leading-[12px]">
+                        Asus P306 TUF GAMING M4 Wireless
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$54</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_ra07_tuf_k3_gen2.png" alt="Asus RA07 TUF K3 Gen II"
+                        class="md:w-[157px] md:h-[126px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:my-[10px] font-semibold leading-[12px]">
+                        Asus RA07 TUF K3 Gen II
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$75</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[220px] md:h-[290px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[10px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_gladius2_pnk_gamingMouse.png"
+                        alt="Asus ROG Gladius II Origin PNK Gaming Mouse"
+                        class="md:w-[157px] md:h-[126px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:my-[10px] font-semibold leading-[12px]">
+                        Asus ROG Gladius II Origin PNK Gaming Mouse
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$79</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:block md:w-[220px] md:h-[290px] hidden flex flex-col border border-[#D9D9D9] rounded-[10px] p-[10px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_gladius2_pnk_gamingMouse.png"
+                        alt="Asus ROG Gladius II Origin PNK Gaming Mouse"
+                        class="md:w-[157px] md:h-[126px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:my-[10px] font-semibold leading-[12px]">
+                        Asus ROG Gladius II Origin PNK Gaming Mouse
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$79</span>
+                    </div>
+                    <div class="md:pl-[140px] flex gap-[6px] md:mt-[25px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:block md:w-[220px] md:h-[290px] hidden flex flex-col border border-[#D9D9D9] rounded-[10px] p-[10px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/rog_gladius2_pnk_gamingMouse.png"
+                        alt="Asus ROG Gladius II Origin PNK Gaming Mouse"
+                        class="md:w-[157px] md:h-[126px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:my-[10px] font-semibold leading-[12px]">
+                        Asus ROG Gladius II Origin PNK Gaming Mouse
+                    </div>
+                    <div
+                        class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                        <span class="">$79</span>
+                    </div>
+                    <div class="pl-[140px] flex gap-[6px] mt-[25px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[285px]">Show
+                More</button>
+        </div>
+        <!-- monitor sec -->
+        <div class="md:h-[90px] md:flex md:flex-col md:items-center md:pt-[33px] h-[35px] flex flex-col pt-[10px]">
+            <p
+                class="md:text-[32px] md:font-semibold md:h-[32px] md:flex md:items-center md:pr-[1075px] text-[15px] h-[20px] font-semibold text-center pr-[286px]">
+                Monitors</p>
+            <div class="md:hidden flex justify-center items-center pt-[3px] ">
+                <hr class="w-[64px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[286px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+            <div class="hidden md:block md:flex md:justify-center pt-[23px]">
+                <hr class="w-[134px] bg-[#D00003] h-[2px] border-0 rounded-l">
+                <hr class="w-[1075px] bg-[#D9D9D9] h-[2px] border-0 rounded-r">
+            </div>
+        </div>
+        <div class="md:h-[452px] md:text-[16px] h-[314px] flex flex-col items-center text-[10px]">
+            <div
+                class="md:w-[1210px] md:h-[427px] md:gap-[20px] md:my-[20px] w-[358px] h-[275px] flex gap-[8px] my-[10px]">
+                <div
+                    class="md:w-[226px] md:h-[380px] md:p-[10px] w-[114px] h-[275px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_tuf_gaming_VG32VQR.png" alt="Asus TUF Gaming VG32VQR"
+                        class="md:w-[170px] md:h-[140px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        Asus TUF Gaming VG32VQR
+                    </div>
+                    <ul
+                        class="md:text-[13px] md:leading-[16px] md:h-[74x] list-disc pl-[11px] text-[10px] leading-[12px] p-[5px]">
+                        <li>Display 32'Inch 2k Quad HD</li>
+                        <li>Refresh rate 165HZ</li>
+                        <li>FreeSync Premium</li>
+                        <li>Curved Monitor</li>
+                    </ul>
+                    <div class="md:text-[16px] md:leading-[16px] md:pt-[10px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$395</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[380px] md:p-[10px] w-[114px] h-[275px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_tuf_gaming_VG34VQL3A.png" alt="Asus TUF Gaming VG34VQL3A"
+                        class="md:w-[170px] md:h-[140px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        Asus TUF Gaming VG34VQL3A
+                    </div>
+                    <ul
+                        class="md:h-[90px] md:text-[13px] md:leading-[16px] list-disc pl-[11px] text-[10px] leading-[12px] p-[5px]">
+                        <li>Display 32'Inch 2k Quad HD</li>
+                        <li>Refresh rate 180HZ</li>
+                        <li>FreeSync Premium</li>
+                        <li>Curved Monitor</li>
+                        <li>Response Time 1ms</li>
+                    </ul>
+                    <div class="md:text-[16px] md:leading-[16px] md:pt-[10px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$415</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:w-[226px] md:h-[380px] md:p-[10px] w-[114px] h-[275px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_tuf_gaming_VG259Q3A.png" alt="Asus TUF Gaming VG259Q3A"
+                        class="md:w-[170px] md:h-[140px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                        Asus TUF Gaming VG259Q3A
+                    </div>
+                    <ul class="md:h-[90px] md:text-[13px] md:leading-[16px] list-disc pl-[11px] text-[10px] leading-[12px] p-[5px]">
+                        <li>Display 24"Inch 1080 Full HD</li>
+                        <li>Refresh rate 180HZ</li>
+                        <li>Response Time 1ms</li>
+                        <li>PS Panel</li>
+                    </ul>
+                    <div class="md:text-[16px] md:leading-[16px] md:pt-[10px] text-[11px] flex items-center gap-2 font-bold">
+                        <span class="">$415</span>
+                    </div>
+                    <div class="md:pl-[146px] flex gap-[6px] mt-auto pl-[52px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:block md:w-[226px] md:h-[380px] md:p-[10px] hidden flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_tuf_gaming_VG259Q3A.png" alt="Asus TUF Gaming VG259Q3A"
+                        class="md:w-[170px] md:h-[140px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="font-semibold leading-[16px] py-[10px]">
+                        Asus TUF Gaming VG259Q3A
+                    </div>
+                    <ul class="list-disc pl-[11px] text-[13px] leading-[16px] p-[5px]">
+                        <li>Display 24"Inch 1080 Full HD</li>
+                        <li>Refresh rate 180HZ</li>
+                        <li>Response Time 1ms</li>
+                        <li>PS Panel</li>
+                    </ul>
+                    <div class="text-[16px] leading-[16px] pt-[10px] flex items-center gap-2 font-bold">
+                        <span class="">$159</span>
+                    </div>
+                    <div class="pl-[146px] flex gap-[6px] mt-[19px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="md:block md:w-[226px] md:h-[380px] md:p-[10px] hidden flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                    <div
+                        class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                        In Stock
+                    </div>
+                    <img src="picture/asus_tuf_gaming_VG259Q3A.png" alt="Asus TUF Gaming VG259Q3A"
+                        class="md:w-[170px] md:h-[140px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                    <div class="font-semibold leading-[16px] py-[10px]">
+                        Asus TUF Gaming VG259Q3A
+                    </div>
+                    <ul class="list-disc pl-[11px] text-[13px] leading-[16px] p-[5px]">
+                        <li>Display 24"Inch 1080 Full HD</li>
+                        <li>Refresh rate 180HZ</li>
+                        <li>Response Time 1ms</li>
+                        <li>PS Panel</li>
+                    </ul>
+                    <div class="text-[16px] leading-[16px] pt-[10px] flex items-center gap-2 font-bold">
+                        <span class="">$159</span>
+                    </div>
+                    <div class="pl-[146px] flex gap-[6px] mt-[19px]">
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                        <button
+                            class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                            <img src="picture/addToCard.png" alt="Add to Cart"
+                                class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="md:w-[120px] md:h-[36px] md:text-[20px] md:ml-[1080px] md:font-semibold bg-[#D00003] border border-[#A8191B] text-white rounded-[3px] w-[65px] h-[20px] ml-[290px]">Show
+                More</button>
+        </div>
+        <div class="md:h-[224px] md:text-[20px] md:mt-[100px] md:leading-[20px] h-[150px] flex justify-center items-center border border-black bg-[#FFD700] mt-[50px] text-[10px]">
+            <div class="md:w-[1015px] md:h-[168px] md:justify-between w-[334px] h-[150px] flex items-center justify-between">
+                <img src="picture/XComputerStoreLogo.png" alt="" class="md:w-[221px] md:h-[150px] w-[74px] h-[55px]">
+                <div class="md:w-[160px] md:h-[180px] w-[75px] h-[64px] flex flex-col justify-center">
+                    <div class="md:h-[30px] h-[13px] flex items-center ">
+                        <img src="picture/Info.png" alt="" class="md:w-[30px] md:h-[30px] w-[13px] h-[13px]">
+                        <p class="leading-[9px] font-semibold">Information</p>
+                    </div>
+                    <ul class="md:pt-[5px] list-disc pt-[1px] pl-[13px] marker:pl-0 marker:pr-0"></ul>
+                    <li class="pl-0 md:pl-[10px]">About us</li>
+                    <li class="pl-0 md:pl-[10px]">Service</li>
+                    <li class="pl-0 md:pl-[10px]">Delivery Info</li>
+                    <li class="pl-0 md:pl-[10px]">Payment</li>
+                    <li class="pl-0 md:pl-[10px]">collaborator</li>
+                    </ul>
+                </div>
+                <div class="md:w-[160px] md:h-[180px] md:justify-center w-[70px] h-[90px] flex flex-col">
+                    <div class="md:h-[30px] h-[13px] flex items-center">
+                        <img src="picture/GoogleMaps.png" alt="" class="md:w-[30px] md:h-[30px] w-[13px] h-[13px]"> 
+                        <p class="leading-[9px] font-semibold">Location</p>
+                    </div>
+                    <ul class="md:pt-[5px] pt-[1px] pl-[3px]">
+                        <li class="pl-0 list-none md:pl-[10px]">ពេទ្យលោកសង្ឃ​</li>
+                        <li class="pl-0 list-none md:pl-[10px]">ផ្លូវលេខ១៤៩</li>
+                        <li class="pl-0 list-none md:pl-[10px]">ផ្ទះលេខ២៩A</li>
+                        <li class="pl-0 list-none md:pl-[10px]">ទឹកល្អក់២</li>
+                        <li class="pl-0 list-none md:pl-[10px]">ភ្នំពេញ</li>
+                    </ul>
+                </div>
+                <div class="md:w-[150px] md:h-[180px] md:justify-center w-[65px] h-[90px] flex flex-col">
+                    <div class="md:h-[30px] h-[13px] flex items-center">
+                        <img src="picture/contact.png" alt="" class="md:w-[30px] md:h-[30px] w-[12px] h-[12px]">
+                        <p class="leading-[9px] w-[] font-semibold pl-[2px]">Contact</p>
+                    </div>
+                    <ul class="md:pt-[5px] list-disc pt-[1px] pl-[13px] marker:pl-0 marker:pr-0"></ul>
+                    <li class="pl-0 md:pl-[10px]">Twitter</li>
+                    <li class="pl-0 md:pl-[10px]">Facebook</li>
+                    <li class="pl-0 md:pl-[10px]">Instagram</li>
+                    <li class="pl-0 md:pl-[10px]">Telegram</li>
+                    <li class="pl-0 md:pl-[10px]">TikTok</li>
+                    </ul>
+                </div>
+
+
             </div>
         </div>
     </div>
