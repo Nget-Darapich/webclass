@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComponentsPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-[Exo] min-h-screen">
+    <!-- phone header -->
+    <nav
+        class="md:hidden h-[104px] flex justify-center bg-[#FFD700] text-[10px] font-semibold shadow-lg border border-black pt-[40px]">
+        <div class="w-[373px] h-[51px] flex mb-[13px]">
+            <img src="picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px]">
+            <div class="flex flex-col w-[294px] h-[51px]">
+                <div class="h-[15px] flex justify-between mb-[9px]">
+                    <div class="w-[134px] h-[14px] flex items-center">
+                        <img src="picture/telegram.png" alt="" class="w-[12px] h-[10px]">
+                        <p class="h-[14px] pl-[5px]">069896357 / 070313498</p>
+                    </div>
+                    <div class="flex">
+                        <img src="picture/addToCard.png" alt="" class="w-[15px] h-[14px]">
+                        <p class="w-[40px] pl-[3px]">My cart</p>
+                    </div>
+                    <div class="flex">
+                        <a href="login_SignUp_forgotPassword/login.html">
+                            <img src="picture/Acc.png" alt="" class="w-[15px] h-[14px]">
+                        </a>
+                        <p class="w-[63px] pl-[3px] pr-[5px]">My Account</p>
+                    </div>
+                </div>
+                <div class="h-[27px] flex">
+                    <input type="text"
+                        class="w-[216px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                    <button class="w-[75px] bg-black text-white">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--pc header-->
+    <nav class="hidden md:block md:h-[112px] md:bg-[#FFD700] md:flex md:justify-center md:border md:border-black md:text-[20px] md:font-semibold">
+        <div class="w-[1098px] flex items-center gap-[20px]">
+            <img src="picture/XComputerStoreLogo.png" alt="" class="w-[117px] h-[80px]">
+            <div class="h-[54px] flex">
+                <input type="text"
+                    class="w-[412px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                <button class="w-[89px] bg-black text-white">Search</button>
+            </div>
+            <div class="w-[440px] h-[70px] flex flex-col justify-between">
+                <div class="h-[30px] flex justify-between items-center">
+                    <div class="w-[302px] flex justify-between">
+                        <img src="picture/Email.png" alt="" class="w-[30px] h-[30px]">
+                        <p>Ngetdarapich23@gamil.com</p>
+                    </div>
+                    <div class="w-[113px] flex justify-between">
+                        <a href="login_SignUp_forgotPassword/login.html">
+                            <img src="picture/Acc.png" alt="" class="w-[30px] h-[30px]">
+                        </a>
+                        <p>Account</p>
+                    </div>
+                </div>
+                <div class="h-[30px] flex justify-between items-center">
+                    <div class="w-[302px] flex">
+                        <img src="picture/Phone.png" alt="" class="w-[30px] h-[30px]">
+                        <p class="flex pl-[10px]">069896357 / 070313498</p>
+                    </div>
+                    <div class="w-[113px] flex justify-between">
+                        <img src="picture/addToCard.png" alt="" class="w-[30px] h-[30px]">
+                        <p>My cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white flex justify-center items-center">
+        <nav
+            class="md:h-[58px] md:text-[20px] md:leading-[20px] md:pr-[995px] md:pt-[15px] md:h-[58px] md:gap-[30px] h-[35px] flex gap-6 py-2 text-base font-semibold underline pr-[195px]">
+            <a href="index.html" class="hover:text-[#D00003]">Home</a>
+            <a href="#" class="hover:text-[#D00003] text-[#D00003]">Components</a>
+        </nav>
+    </div>
+
+    <div class="md:h-[290px] md:text-[16px] h-[187px] flex flex-col items-center text-[10px]">
+        <div
+            class="md:w-[1200px] md:h-[290px] md:mt-0 md:mb-0 md:gap-[25px] w-[350px] h-[172px] flex gap-[10px] mt-[5px] mb-[10px]">
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/i7_265k.png" alt="i7_265k"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    Intel Core Ultra 7 265K ( 20cores / Up to 5.5 GHz)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span class="">$345</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/i7_265kff.png" alt="i7_265kff"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10x] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:text-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    Intel Core Ultra 7 265KF ( 20cores / Up to 5.5 GHz)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$335</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB(2.5"/ Cache 128MB /5400rpm)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB( 2.5"/ Cache 128MB /5400rpm )
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB ( 2.5"/ Cache 128MB /5400rpm )
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md:h-[315px] md:text-[16px] h-[173px] flex flex-col items-center text-[10px]">
+        <div
+            class="md:w-[1200px] md:h-[290px] md:gap-[25px] md:mt-[25px] w-[350px] h-[173px] flex gap-[10px]">
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/i7_265k.png" alt="i7_265k"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    Intel Core Ultra 7 265K ( 20cores / Up to 5.5 GHz)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span class="">$345</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/i7_265kff.png" alt="i7_265kff"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10x] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:text-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    Intel Core Ultra 7 265KF ( 20cores / Up to 5.5 GHz)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$335</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="md:w-[220px] md:h-[290px] md:p-[10px] w-[110px] h-[173px] flex flex-col border border-[#D9D9D9] rounded-[10px] p-[6px] relative shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] w-[80px] h-[60px] object-contain mx-auto mt-[16px] mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB(2.5"/ Cache 128MB /5400rpm)
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] text-[11px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto pl-[52px]">
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] w-[19px] h-[18px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart"
+                            class="md:w-[20px] md:h-[20px] w-[13px] h-[13px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB( 2.5"/ Cache 128MB /5400rpm )
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="hidden md:w-[220px] md:h-[290px] md:flex md:flex-col md:border md:border-[#D9D9D9] md:rounded-[10px] md:p-[10px] md:relative md:shadow-sm">
+                <div
+                    class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
+                    In Stock
+                </div>
+                <img src="picture/wd_blue_1TB.png" alt="wd_blue_1TB"
+                    class="md:w-[157px] md:h-[126px] md:pt-[10px] md:object-contain md:mx-auto md:mt-[16px] md:mb-[5px]">
+                <div class="md:leading-[16px] md:py-[10px] font-semibold leading-[12px]">
+                    HDD Laptop WD Blue 1TB ( 2.5"/ Cache 128MB /5400rpm )
+                </div>
+                <div class="md:leading-[16px] md:text-[16px] font-bold flex items-center gap-2 pt-[5px]">
+                    <span>$49</span>
+                </div>
+                <div class="md:pl-[140px] flex gap-[6px] mt-auto">
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/view.png" alt="View" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                    <button
+                        class="md:w-[26px] md:h-[26px] border border-black flex items-center justify-center bg-[#E3E3E3]">
+                        <img src="picture/addToCard.png" alt="Add to Cart" class="md:w-[20px] md:h-[20px]">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div
+        class="md:h-[224px] md:text-[20px] md:mt-[100px] md:leading-[20px] h-[150px] flex justify-center items-center border border-black bg-[#FFD700] mt-[194px] text-[10px]">
+        <div
+            class="md:w-[1015px] md:h-[168px] md:justify-between w-[334px] h-[150px] flex items-center justify-between">
+            <img src="picture/XComputerStoreLogo.png" alt="" class="md:w-[221px] md:h-[150px] w-[74px] h-[55px]">
+            <div class="md:w-[160px] md:h-[180px] w-[75px] h-[64px] flex flex-col justify-center">
+                <div class="md:h-[30px] h-[13px] flex items-center ">
+                    <img src="picture/Info.png" alt="" class="md:w-[30px] md:h-[30px] w-[13px] h-[13px]">
+                    <p class="leading-[9px] font-semibold">Information</p>
+                </div>
+                <ul class="md:pt-[5px] list-disc pt-[1px] pl-[13px] marker:pl-0 marker:pr-0"></ul>
+                <li class="pl-0 md:pl-[10px]">About us</li>
+                <li class="pl-0 md:pl-[10px]">Service</li>
+                <li class="pl-0 md:pl-[10px]">Delivery Info</li>
+                <li class="pl-0 md:pl-[10px]">Payment</li>
+                <li class="pl-0 md:pl-[10px]">collaborator</li>
+                </ul>
+            </div>
+            <div class="md:w-[160px] md:h-[180px] md:justify-center w-[70px] h-[90px] flex flex-col">
+                <div class="md:h-[30px] h-[13px] flex items-center">
+                    <img src="picture/GoogleMaps.png" alt="" class="md:w-[30px] md:h-[30px] w-[13px] h-[13px]">
+                    <p class="leading-[9px] font-semibold">Location</p>
+                </div>
+                <ul class="md:pt-[5px] pt-[1px] pl-[3px]">
+                    <li class="pl-0 list-none md:pl-[10px]">ពេទ្យលោកសង្ឃ​</li>
+                    <li class="pl-0 list-none md:pl-[10px]">ផ្លូវលេខ១៤៩</li>
+                    <li class="pl-0 list-none md:pl-[10px]">ផ្ទះលេខ២៩A</li>
+                    <li class="pl-0 list-none md:pl-[10px]">ទឹកល្អក់២</li>
+                    <li class="pl-0 list-none md:pl-[10px]">ភ្នំពេញ</li>
+                </ul>
+            </div>
+            <div class="md:w-[150px] md:h-[180px] md:justify-center w-[65px] h-[90px] flex flex-col">
+                <div class="md:h-[30px] h-[13px] flex items-center">
+                    <img src="picture/contact.png" alt="" class="md:w-[30px] md:h-[30px] w-[12px] h-[12px]">
+                    <p class="leading-[9px] w-[] font-semibold pl-[2px]">Contact</p>
+                </div>
+                <ul class="md:pt-[5px] list-disc pt-[1px] pl-[13px] marker:pl-0 marker:pr-0"></ul>
+                <li class="pl-0 md:pl-[10px]">Twitter</li>
+                <li class="pl-0 md:pl-[10px]">Facebook</li>
+                <li class="pl-0 md:pl-[10px]">Instagram</li>
+                <li class="pl-0 md:pl-[10px]">Telegram</li>
+                <li class="pl-0 md:pl-[10px]">TikTok</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

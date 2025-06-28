@@ -13,7 +13,7 @@
 
 <body class="font-[Exo] min-h-screen">
     <!-- phone header -->
-    <nav class="md:hidden h-[124px] flex justify-center bg-[#FFD700] text-[10px] font-semibold shadow-lg pt-[60px]">
+    <nav class="md:hidden h-[104px] flex justify-center bg-[#FFD700] text-[10px] border border-black font-semibold shadow-lg pt-[40px]">
         <div class="w-[373px] h-[51px] flex mb-[13px]">
             <img src="picture/XComputerStoreLogo.png" alt="Computer Store Logo" class="w-[74px] h-[51px]">
             <div class="flex flex-col w-[294px] h-[51px]">
@@ -24,25 +24,25 @@
                     </div>
                     <div class="flex">
                         <img src="picture/addToCard.png" alt="" class="w-[15px] h-[14px]">
-                        <p class="w-[46px] pl-[3px]">My cart</p>
+                        <p class="w-[40px] pl-[3px]">My cart</p>
                     </div>
                     <div class="flex">
                         <a href="login_SignUp_forgotPassword/login.html">
                             <img src="picture/Acc.png" alt="" class="w-[15px] h-[14px]">
                         </a>
-                        <p class="w-[62px] pl-[3px]">My Account</p>
+                        <p class="w-[63px] pl-[3px] pr-[5px]">My Account</p>
                     </div>
                 </div>
                 <div class="h-[27px] flex">
                     <input type="text"
-                        class="w-[240px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
-                    <button class="w-[54px] bg-black text-white">Search</button>
+                        class="w-[216px] border border-black bg-white px-2 focus:outline-none focus:rounded-none"></input>
+                    <button class="w-[75px] bg-black text-white">Search</button>
                 </div>
             </div>
         </div>
     </nav>
     <!--pc header-->
-    <nav class="hidden md:block md:h-[112px] md:bg-[#FFD700] md:flex md:justify-center md:text-[20px] md:font-semibold">
+    <nav class="hidden md:block md:h-[112px] md:bg-[#FFD700] md:flex md:justify-center md:text-[20px] md:border md:border-black md:font-semibold">
         <div class="w-[1098px] flex items-center gap-[20px]">
             <img src="picture/XComputerStoreLogo.png" alt="" class="w-[117px] h-[80px]">
             <div class="h-[54px] flex">
@@ -87,23 +87,26 @@
     </div>
 
     <div class="w-full flex justify-center mt-[10px] md:mt-0">
-        <div class="md:w-[1210px] md:h-[607px] w-[350px] h-[478px] border border-[#D9D9D9] rounded-[10px] shadow-lg relative flex">
+        <div
+            class="md:w-[1210px] md:h-[607px] w-[350px] h-[478px] border border-[#D9D9D9] rounded-[10px] shadow-lg relative flex">
             <div
                 class="absolute top-[-2px] left-[-2px] bg-[#2AD19D] text-white font-semibold px-2 py-[2px] rounded-tl-[7px] rounded-br-[7px] shadow border border-[#2BB092]">
                 In Stock
             </div>
             <div class="md:w-[605px] md:h-[453px] justify-center w-[175px] h-[151px] flex items-center group">
-                <img id="back-btn" src="picture/back.png" alt="" class="w-[15px] h-[15px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <img id="back-btn" src="picture/back.png" alt=""
+                    class="md:w-[30px] md:h-[30px] w-[15px] h-[15px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer">
                 <img id="main-img" src="picture/vector_A18_HXA9WIG.png" alt="MSI 16 HX AI"
                     class="md:w-[464px] md:h-[373px] w-[145px] h-[116px] object-contain mt-7 mb-2">
-                <img id="next-btn" src="picture/next.png" alt="" class="w-[15px] h-[15px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <img id="next-btn" src="picture/next.png" alt=""
+                    class="md:w-[30px] md:h-[30px] w-[15px] h-[15px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer">
             </div>
             <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
             <script>
-                $('#next-btn').on('click', function() {
+                $('#next-btn').on('click', function () {
                     $('#main-img').attr('src', 'picture/vector_A18_HXA9WIG_img2.png');
                 });
-                $('#back-btn').on('click', function() {
+                $('#back-btn').on('click', function () {
                     $('#main-img').attr('src', 'picture/vector_A18_HXA9WIG.png');
                 });
             </script>
@@ -113,7 +116,8 @@
                     <p>$2799</p>
                     <p class="text-red-500 line-through ml-3">$3199</p>
                 </div>
-                <ul class="md:leading-[16px] md:text-[16px] leading-[10px] text-[10px] leading-snug list-disc pl-5 md:space-y-2">
+                <ul
+                    class="md:leading-[16px] md:text-[16px] leading-[10px] text-[10px] leading-snug list-disc pl-5 md:space-y-2">
                     <li><b>CPU</b> : Intel® Core™ ULTRA 9 275HX</li>
                     <li><b>RAM</b> : 16GB 8*2 DDR5 Original</li>
                     <li><b>SSD</b> : NVME PCIE 1TB Gen4 Original</li>
@@ -137,57 +141,15 @@
                         </ul>
                     </div>
                 </ul>
-                <button class="absolute bottom-3 right-3 border border-black bg-[#E3E3E3] px-[5px] py-[5px] shadow flex items-center gap-2">
+                <button
+                    class="absolute bottom-3 right-3 border border-black bg-[#E3E3E3] px-[5px] py-[5px] shadow flex items-center gap-2">
                     <img src="picture/addToCard.png" alt="" class="md:w-[30px] md:h-[30px] w-[15px] h-[15px]">
                 </button>
 
             </div>
         </div>
     </div>
-    <!-- <div class="w-full flex justify-center items-center mt-6">
-        <div class="w-[400px] bg-white rounded-[12px] shadow-lg border border-[#e5e7eb] p-4 relative">
-            <div class="absolute top-2 left-2 bg-[#2AD19D] text-white text-xs font-semibold px-3 py-1 rounded-tl-md rounded-br-md shadow border border-[#2BB092]">
-                In Stock
-            </div>
-            <div class="flex flex-col items-center">
-                <img src="picture/msi-vector16.png" alt="MSI Vector 16 HX AI" class="w-[220px] h-[140px] object-contain mt-6 mb-2">
-                <div class="w-full px-2">
-                    <h2 class="text-lg font-semibold mb-1">Vector 16 HX AI A2XWIG</h2>
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="text-2xl font-bold text-black">$2799</span>
-                        <span class="text-lg font-semibold text-red-500 line-through">$3199</span>
-                    </div>
-                    <ul class="text-[13px] leading-snug mb-2 list-disc pl-5">
-                        <li><b>CPU</b> : Intel® Core™ ULTRA 9 275HX</li>
-                        <li><b>RAM</b> : 16GB 8*2 DDR5 Original</li>
-                        <li><b>SSD</b> : NVME PCIE 1TB Gen4 Original</li>
-                        <li><b>Screen</b> : 16" 16:10 QHD+ 240Hz</li>
-                        <li><b>VGA</b> : NVIDIA RTX 5080 GDDR7 16GB</li>
-                        <li>26-zone RGB Gaming Keyboard</li>
-                        <li>OS win 11 License</li>
-                        <li>Laptop is Original Box Company +2Years Warranty</li>
-                    </ul>
-                    <div class="mb-2">
-                        <span class="font-semibold text-[13px]">Free :</span>
-                        <ul class="text-[13px] list-disc pl-5">
-                            <li>MSI BackPack</li>
-                            <li>MSI Mouse Gaming</li>
-                            <li>MSI Gaming Headset</li>
-                            <li>Flash 64GB</li>
-                            <li>Cooling Fan</li>
-                            <li>Cleaning kit</li>
-                            <li>Mousepad</li>
-                            <li>Powerbank 20000mAh</li>
-                            <li>Screen protection + Cleaning kit</li>
-                        </ul>
-                    </div>
-                </div>
-                <button class="absolute bottom-4 right-4 bg-white border border-gray-300 rounded px-3 py-2 shadow hover:bg-gray-100 flex items-center gap-2">
-                    <i class="fa fa-shopping-cart text-black"></i>
-                </button>
-            </div>
-        </div>
-    </div> -->
+
     <div
         class="md:h-[224px] md:text-[20px] md:mt-[100px] md:leading-[20px] h-[150px] flex justify-center items-center border border-black bg-[#FFD700] mt-[77px] text-[10px]">
         <div
