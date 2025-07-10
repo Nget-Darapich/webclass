@@ -7,62 +7,80 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Todo List</title>
 </head>
 
-<body class="flex flex-col ml-8 mt-8 gap-8 min-h-screen">
+<body class="flex flex-col items-center mt-[100px] gap-8 max-h-screen">
     <div>
-
-        <div class="countTask">All Task: 0</div>
-        <div class="complete">Complete: 0</div>
-        <div class="remaining">Remaining: 0</div>
-
-        <input type="text" name="" id="" class="inputTask">
-        <button onclick="createNewTask()">New Task</button>
+        <div class="text-[48px] font-semibold">Todo List</div>
+        <hr class="border-black">
+        <div class="flex gap-[68px] my-[40px]">
+            <div class="complete w-[245px] h-[60px] flex items-center justify-center border-2 border-red-500 rounded-[3px] px-6 py-2 text-[24px] font-semibold text-gray-700">
+                Completed <span class="text-red-600 font-bold text-[32px] ml-[10px] count-complete">0</span>
+            </div>
+            <div class="remaining w-[245px] h-[60px] flex items-center justify-center border-2 border-red-500 rounded-[3px] px-6 py-2 text-[24px] font-semibold text-gray-700">
+                Remaining <span class="text-red-600 font-bold text-[32px] ml-[10px] count-remaining">0</span>
+            </div>
+            <div class="countTask w-[245px] h-[60px] flex items-center justify-center border-2 border-red-500 rounded-[3px]  px-6 py-2 text-[24px] font-semibold text-gray-700">
+                All Tasks <span class="text-red-600 font-bold text-[32px] ml-[10px] count-all">0</span>
+            </div>
+        </div>
+        <div class="flex">
+            <input type="text" class="inputTask border border-black w-[690px] h-[60px] px-4 text-lg">
+            <button onclick="createNewTask()" class="bg-[#1E9CEA] w-[180px] h-[60px] text-white text-lg font-semibold">New task <span>➕</span></button>
+        </div>
     </div>
 
-    <div class="allTasks">
+    <div class="allTasks flex flex-col gap-4 w-full max-w-2xl mt-4"></div>
 
-    </div>
     <script>
-        function createNewTask() {
-            let inputTask = $(".inputTask").val();
-            let newTask = $("<div></div>");
-            
-            $(".allTasks").append(newTask);
-            
-            let trashIcon = $("<span></span>");
-            trashIcon.text("🗑");
-
-            let checkBox = $('<input type="checkbox">');
-
-            let task = $("<label></label>");
-
-            task.text(inputTask);
-
-            newTask.append(trashIcon);
-            newTask.append(checkBox);
-            newTask.append(task);
-
-            
-            let coutTask = $(".allTasks").children().length;
-            $(".countTask").text("All Task: " + coutTask);
-
-            checkbox.click(function (){
-                var checkCheckBoxes = $('input:checkbox:checked').length;
-                $(".complete").text("Complete: " + checkCheckBoxes);
-
-
-                var uncheckCheckBoxes = $('input:checkbox:not(:checked)').length;
-                $(".remaining").text("Remaining: " + uncheckCheckBoxes);
-            })
-
-
-
+        function updateCounts() {
+            let total = $(".allTasks > .task-item").length;
+            let completed = $(".allTasks input[type=checkbox]:checked").length;
+            let remaining = total - completed;
+            $(".count-all").text(total);
+            $(".count-complete").text(completed);
+            $(".count-remaining").text(remaining);
         }
+
+        function createNewTask() {
+            let inputTask = $(".inputTask").val().trim();
+            if (inputTask === "") return;
+
+            let newTask = $(`
+                <div class="task-item flex items-center gap-4 text-lg">
+                    <span class="delete-task cursor-pointer text-[30px]" title="Delete">🗑</span>
+                    <input type="checkbox" class="task-checkbox w-[25px] h-[25px] border-[2px] rounded-md">
+                    <label class="task-label cursor-pointer">${$('<div>').text(inputTask).html()}</label>
+                </div>
+            `);
+
+            newTask.find('.task-checkbox').on('change', function () {
+                let label = $(this).siblings('.task-label');
+                if (this.checked) {
+                    label.addClass('line-through text-gray-400');
+                } else {
+                    label.removeClass('line-through text-gray-400');
+                }
+                updateCounts();
+            });
+
+            newTask.find('.delete-task').on('click', function () {
+                $(this).closest('.task-item').remove();
+                updateCounts();
+            });
+
+            $(".allTasks").append(newTask);
+            $(".inputTask").val('');
+            updateCounts();
+        }
+
+        $(".inputTask").on('keypress', function (e) {
+            if (e.which === 13) createNewTask();
+        });
+
+        updateCounts();
     </script>
-
-
 </body>
 
 </html>

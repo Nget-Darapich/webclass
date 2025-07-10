@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>password strength checker</title>
+</head>
+
+<body class="flex justify-center max-h-screen">
+    <div
+        class="w-[600px] h-[536px] flex flex-col mt-[100px] pt-[20px] border border-gray shadow-lg rounded-lg">
+        <p class="text-[30px] mt-[30px] pl-[90px] font-[Exo] font-semibold">Password Strength Checker</p>
+        <input type="text" class="inputPw mt-[30px] ml-[60px] w-[460px] h-[60px] px-4 border border-gray-350 rounded-lg">
+        <p class="text-[24px] mb-[10px] text-gray-400 mt-[30px] pl-[60px]">Password must include:</p>
+        <li class="text-gray-600 ml-[80px] text-[20px]">At least 8 characters</li>
+        <li class="text-gray-600 ml-[80px] text-[20px]">At least 1 number (0-9)</li>
+        <li class="text-gray-600 ml-[80px] text-[20px]">At least 1 symbol (e.g. ! @ # $ % ^ & *)</li>
+        <div class="result mt-6 ml-[80px] text-[20px]"></div>
+    </div>
+
+    <script>
+        function checkPasswordStrength(pw) {
+            const lengthOK = pw.length >= 8;
+            const numberOK = /\d/.test(pw);
+            const symbolOK = /[!@#$%^&*]/.test(pw);
+            return lengthOK && numberOK && symbolOK;
+        }
+
+        $(document).ready(function () {
+            $('.inputPw').on('input', function () {
+                const pw = $(this).val();
+                if (checkPasswordStrength(pw)) {
+                    $('.result').html('<span class="text-green-600 font-semibold"><i class="fa-solid fa-check"></i> &#x2705; Strong Password</span>');
+                } else {
+                    $('.result').html('<span class="text-red-600 font-semibold"><i class="fa-solid fa-xmark"></i> &#x274C; Not Strong Yet</span>');
+                }
+            });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/4b1c8b6e0c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
